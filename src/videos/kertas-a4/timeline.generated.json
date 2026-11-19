@@ -1,0 +1,497 @@
+{
+	"fps": 30,
+	"estimated": true,
+	"audio": null,
+	"audioDuration": 50.190000000000104,
+	"durationInFrames": 1521,
+	"segments": [
+		{
+			"id": "hook",
+			"start": 0,
+			"end": 8.99
+		},
+		{
+			"id": "tension",
+			"start": 8.99,
+			"end": 17.790000000000003
+		},
+		{
+			"id": "lichtenberg",
+			"start": 17.790000000000003,
+			"end": 26.96000000000002
+		},
+		{
+			"id": "lipat",
+			"start": 26.96000000000002,
+			"end": 38.82000000000006
+		},
+		{
+			"id": "manfaat",
+			"start": 38.82000000000006,
+			"end": 47.590000000000096
+		},
+		{
+			"id": "outro",
+			"start": 47.590000000000096,
+			"end": 50.690000000000104
+		}
+	],
+	"words": [
+		{
+			"display": "Kenapa",
+			"start": 0.25,
+			"end": 0.7799999999999999,
+			"segment": 0
+		},
+		{
+			"display": "kertas",
+			"start": 0.82,
+			"end": 1.2,
+			"segment": 0
+		},
+		{
+			"display": "A4",
+			"start": 1.24,
+			"end": 1.8900000000000001,
+			"segment": 0
+		},
+		{
+			"display": "ukurannya",
+			"start": 1.93,
+			"end": 2.61,
+			"segment": 0
+		},
+		{
+			"display": "nggak",
+			"start": 2.65,
+			"end": 2.88,
+			"segment": 0
+		},
+		{
+			"display": "bulat",
+			"start": 2.92,
+			"end": 3.3,
+			"segment": 0
+		},
+		{
+			"display": "—",
+			"start": 3.34,
+			"end": 3.57,
+			"segment": 0
+		},
+		{
+			"display": "malah",
+			"start": 3.61,
+			"end": 3.9899999999999998,
+			"segment": 0
+		},
+		{
+			"display": "210",
+			"start": 4.03,
+			"end": 5.25,
+			"segment": 0
+		},
+		{
+			"display": "kali",
+			"start": 5.29,
+			"end": 5.67,
+			"segment": 0
+		},
+		{
+			"display": "297",
+			"start": 5.71,
+			"end": 7.77,
+			"segment": 0
+		},
+		{
+			"display": "milimeter?",
+			"start": 7.81,
+			"end": 8.49,
+			"segment": 0
+		},
+		{
+			"display": "Kalau",
+			"start": 9.19,
+			"end": 9.57,
+			"segment": 1
+		},
+		{
+			"display": "dibulatkan",
+			"start": 9.61,
+			"end": 10.29,
+			"segment": 1
+		},
+		{
+			"display": "jadi",
+			"start": 10.33,
+			"end": 10.71,
+			"segment": 1
+		},
+		{
+			"display": "200",
+			"start": 10.75,
+			"end": 11.4,
+			"segment": 1
+		},
+		{
+			"display": "kali",
+			"start": 11.44,
+			"end": 11.82,
+			"segment": 1
+		},
+		{
+			"display": "300,",
+			"start": 11.86,
+			"end": 12.66,
+			"segment": 1
+		},
+		{
+			"display": "begitu",
+			"start": 12.899999999999999,
+			"end": 13.429999999999998,
+			"segment": 1
+		},
+		{
+			"display": "dilipat",
+			"start": 13.469999999999999,
+			"end": 13.999999999999998,
+			"segment": 1
+		},
+		{
+			"display": "dua,",
+			"start": 14.04,
+			"end": 14.27,
+			"segment": 1
+		},
+		{
+			"display": "perbandingan",
+			"start": 14.509999999999998,
+			"end": 15.189999999999998,
+			"segment": 1
+		},
+		{
+			"display": "panjang",
+			"start": 15.229999999999999,
+			"end": 15.61,
+			"segment": 1
+		},
+		{
+			"display": "dan",
+			"start": 15.649999999999999,
+			"end": 15.879999999999999,
+			"segment": 1
+		},
+		{
+			"display": "lebarnya",
+			"start": 15.919999999999998,
+			"end": 16.45,
+			"segment": 1
+		},
+		{
+			"display": "langsung",
+			"start": 16.49,
+			"end": 16.869999999999997,
+			"segment": 1
+		},
+		{
+			"display": "rusak.",
+			"start": 16.91,
+			"end": 17.29,
+			"segment": 1
+		},
+		{
+			"display": "Tahun",
+			"start": 17.990000000000002,
+			"end": 18.37,
+			"segment": 2
+		},
+		{
+			"display": "1786,",
+			"start": 18.410000000000004,
+			"end": 21.19000000000001,
+			"segment": 2
+		},
+		{
+			"display": "fisikawan",
+			"start": 21.43000000000001,
+			"end": 22.11000000000001,
+			"segment": 2
+		},
+		{
+			"display": "Jerman",
+			"start": 22.15000000000001,
+			"end": 22.53000000000001,
+			"segment": 2
+		},
+		{
+			"display": "Georg",
+			"start": 22.57000000000001,
+			"end": 22.80000000000001,
+			"segment": 2
+		},
+		{
+			"display": "Christoph",
+			"start": 22.84000000000001,
+			"end": 23.22000000000001,
+			"segment": 2
+		},
+		{
+			"display": "Lichtenberg",
+			"start": 23.260000000000012,
+			"end": 23.790000000000013,
+			"segment": 2
+		},
+		{
+			"display": "menemukan",
+			"start": 23.830000000000013,
+			"end": 24.510000000000012,
+			"segment": 2
+		},
+		{
+			"display": "rasio",
+			"start": 24.55000000000001,
+			"end": 24.93000000000001,
+			"segment": 2
+		},
+		{
+			"display": "satu",
+			"start": 24.970000000000013,
+			"end": 25.350000000000012,
+			"segment": 2
+		},
+		{
+			"display": "banding",
+			"start": 25.390000000000015,
+			"end": 25.770000000000014,
+			"segment": 2
+		},
+		{
+			"display": "akar",
+			"start": 25.810000000000016,
+			"end": 26.190000000000015,
+			"segment": 2
+		},
+		{
+			"display": "dua.",
+			"start": 26.230000000000018,
+			"end": 26.46000000000002,
+			"segment": 2
+		},
+		{
+			"display": "Lalu",
+			"start": 27.160000000000018,
+			"end": 27.540000000000017,
+			"segment": 3
+		},
+		{
+			"display": "tahun",
+			"start": 27.58000000000002,
+			"end": 27.96000000000002,
+			"segment": 3
+		},
+		{
+			"display": "1922,",
+			"start": 28.00000000000002,
+			"end": 30.480000000000025,
+			"segment": 3
+		},
+		{
+			"display": "Walter",
+			"start": 30.720000000000024,
+			"end": 31.100000000000023,
+			"segment": 3
+		},
+		{
+			"display": "Porstmann",
+			"start": 31.140000000000025,
+			"end": 31.520000000000024,
+			"segment": 3
+		},
+		{
+			"display": "menetapkan",
+			"start": 31.560000000000027,
+			"end": 32.24000000000003,
+			"segment": 3
+		},
+		{
+			"display": "A0",
+			"start": 32.28000000000003,
+			"end": 32.78000000000003,
+			"segment": 3
+		},
+		{
+			"display": "seluas",
+			"start": 32.820000000000036,
+			"end": 33.20000000000004,
+			"segment": 3
+		},
+		{
+			"display": "tepat",
+			"start": 33.24000000000004,
+			"end": 33.62000000000004,
+			"segment": 3
+		},
+		{
+			"display": "satu",
+			"start": 33.66000000000004,
+			"end": 34.04000000000004,
+			"segment": 3
+		},
+		{
+			"display": "meter",
+			"start": 34.08000000000004,
+			"end": 34.46000000000004,
+			"segment": 3
+		},
+		{
+			"display": "persegi.",
+			"start": 34.50000000000004,
+			"end": 35.030000000000044,
+			"segment": 3
+		},
+		{
+			"display": "Dilipat",
+			"start": 35.490000000000045,
+			"end": 36.020000000000046,
+			"segment": 3
+		},
+		{
+			"display": "empat",
+			"start": 36.060000000000045,
+			"end": 36.44000000000005,
+			"segment": 3
+		},
+		{
+			"display": "kali,",
+			"start": 36.48000000000005,
+			"end": 36.86000000000005,
+			"segment": 3
+		},
+		{
+			"display": "jadilah",
+			"start": 37.10000000000005,
+			"end": 37.63000000000005,
+			"segment": 3
+		},
+		{
+			"display": "A4.",
+			"start": 37.67000000000005,
+			"end": 38.32000000000006,
+			"segment": 3
+		},
+		{
+			"display": "Hasilnya,",
+			"start": 39.02000000000006,
+			"end": 39.55000000000006,
+			"segment": 4
+		},
+		{
+			"display": "pabrik",
+			"start": 39.79000000000006,
+			"end": 40.170000000000066,
+			"segment": 4
+		},
+		{
+			"display": "memotong",
+			"start": 40.210000000000065,
+			"end": 40.740000000000066,
+			"segment": 4
+		},
+		{
+			"display": "kertas",
+			"start": 40.780000000000065,
+			"end": 41.16000000000007,
+			"segment": 4
+		},
+		{
+			"display": "nyaris",
+			"start": 41.20000000000007,
+			"end": 41.58000000000007,
+			"segment": 4
+		},
+		{
+			"display": "tanpa",
+			"start": 41.62000000000007,
+			"end": 42.00000000000007,
+			"segment": 4
+		},
+		{
+			"display": "sisa,",
+			"start": 42.04000000000007,
+			"end": 42.42000000000007,
+			"segment": 4
+		},
+		{
+			"display": "dan",
+			"start": 42.660000000000075,
+			"end": 42.89000000000007,
+			"segment": 4
+		},
+		{
+			"display": "dua",
+			"start": 42.93000000000008,
+			"end": 43.160000000000075,
+			"segment": 4
+		},
+		{
+			"display": "halaman",
+			"start": 43.20000000000008,
+			"end": 43.73000000000008,
+			"segment": 4
+		},
+		{
+			"display": "A5",
+			"start": 43.77000000000008,
+			"end": 44.42000000000009,
+			"segment": 4
+		},
+		{
+			"display": "pas",
+			"start": 44.460000000000086,
+			"end": 44.69000000000008,
+			"segment": 4
+		},
+		{
+			"display": "difotokopi",
+			"start": 44.73000000000009,
+			"end": 45.56000000000009,
+			"segment": 4
+		},
+		{
+			"display": "ke",
+			"start": 45.60000000000009,
+			"end": 45.830000000000084,
+			"segment": 4
+		},
+		{
+			"display": "selembar",
+			"start": 45.87000000000009,
+			"end": 46.40000000000009,
+			"segment": 4
+		},
+		{
+			"display": "A4.",
+			"start": 46.44000000000009,
+			"end": 47.090000000000096,
+			"segment": 4
+		},
+		{
+			"display": "Oh...",
+			"start": 47.7900000000001,
+			"end": 48.020000000000095,
+			"segment": 5
+		},
+		{
+			"display": "gitu",
+			"start": 48.4800000000001,
+			"end": 48.860000000000106,
+			"segment": 5
+		},
+		{
+			"display": "ternyata.",
+			"start": 48.900000000000105,
+			"end": 49.430000000000106,
+			"segment": 5
+		}
+	]
+}

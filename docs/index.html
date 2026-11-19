@@ -1,0 +1,2100 @@
+<!doctype html>
+<html lang="id">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Remotion AI Video Kit — Bikin Video Edukasi 9:16 Cukup Pakai Prompt</title>
+	<meta
+		name="description"
+		content="Template siap pakai untuk bikin video edukasi pendek TikTok, Instagram Reels, Facebook, dan YouTube Shorts cukup lewat prompt AI (Antigravity, Claude Code, Cursor, Codex)."
+	/>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Host+Grotesk:wght@500;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap"
+		rel="stylesheet"
+	/>
+	<style>
+		:root {
+			--paper: #fffdf5;
+			--white: #ffffff;
+			--ink: #253044;
+			--outline: #252b3a;
+			--violet: #6434df;
+			--violet-bright: #7041ed;
+			--pink: #ff78c5;
+			--amber: #ffd05b;
+			--mint: #9bf1cd;
+			--pale-mint: #e9fff5;
+			--pale-violet: #f1ebff;
+			--rule-muted: #b8b6c5;
+			--grid-line: #e4dfef;
+			--font-display: "Host Grotesk", system-ui, -apple-system, sans-serif;
+			--font-reading: "Instrument Sans", system-ui, -apple-system, sans-serif;
+			--font-mono: ui-monospace, "Cascadia Code", "Fira Code", monospace;
+			--font-arabic: "Amiri", "Noto Naskh Arabic", serif;
+			--radius: 17px;
+			--line: 3px solid var(--outline);
+			--detail: 2px solid var(--outline);
+			--ease: cubic-bezier(0.2, 0.9, 0.3, 1.3);
+		}
+
+		*, *::before, *::after {
+			box-sizing: border-box;
+		}
+
+		html {
+			scroll-behavior: smooth;
+			background: var(--paper);
+		}
+
+		body {
+			margin: 0;
+			background: var(--paper);
+			color: var(--ink);
+			font-family: var(--font-reading);
+			font-size: 17px;
+			line-height: 1.65;
+			-webkit-font-smoothing: antialiased;
+			scrollbar-color: var(--violet) var(--paper);
+		}
+
+		::selection {
+			background: var(--mint);
+			color: var(--outline);
+		}
+
+		h1, h2, h3, p, figure, blockquote {
+			margin: 0;
+		}
+
+		h1, h2, h3 {
+			font-family: var(--font-display);
+			font-weight: 800;
+			text-wrap: balance;
+		}
+
+		h1 {
+			font-size: clamp(44px, 6.2vw, 88px);
+			line-height: 1.02;
+			letter-spacing: -0.052em;
+		}
+
+		h2 {
+			font-size: clamp(32px, 3.8vw, 54px);
+			line-height: 1.08;
+			letter-spacing: -0.044em;
+		}
+
+		h3 {
+			font-size: 22px;
+			line-height: 1.22;
+			letter-spacing: -0.025em;
+		}
+
+		a {
+			color: inherit;
+			text-underline-offset: 0.2em;
+		}
+
+		:is(a, button, summary):focus-visible {
+			outline: 3px solid var(--violet);
+			outline-offset: 5px;
+		}
+
+		button, summary {
+			font: inherit;
+			color: inherit;
+			cursor: pointer;
+		}
+
+		.page {
+			max-width: 1560px;
+			margin-inline: auto;
+			overflow: clip;
+		}
+
+		[data-section] {
+			scroll-margin-top: 24px;
+			position: relative;
+		}
+
+		/* ---------- Geometric Marks ---------- */
+		.shape-mark {
+			display: inline-block;
+			position: relative;
+			flex-shrink: 0;
+			width: 48px;
+			height: 48px;
+			background: var(--violet);
+			border: var(--line);
+		}
+
+		.shape-mark.flower {
+			background: var(--violet);
+			border-radius: 18px;
+			transform: rotate(-10deg);
+		}
+
+		.shape-mark.flower::before,
+		.shape-mark.flower::after {
+			content: "";
+			position: absolute;
+			top: 8px;
+			left: 8px;
+			width: 13px;
+			height: 13px;
+			border-radius: 50%;
+			background: var(--paper);
+			border: var(--detail);
+			box-shadow: 14px 14px 0 -2px var(--paper), 14px 14px 0 0 var(--outline);
+		}
+
+		.shape-mark.flower::after {
+			inset: 8px auto auto 22px;
+			transform: rotate(90deg);
+		}
+
+		.shape-mark.dot {
+			background: var(--pink);
+			border-radius: 50%;
+		}
+
+		.shape-mark.arch {
+			background: var(--mint);
+			border-radius: 50% 50% 8px 8px;
+		}
+
+		.shape-mark.leaf {
+			background: var(--amber);
+			border-radius: 50% 8px;
+			transform: rotate(-15deg);
+		}
+
+		.shape-mark.spark {
+			background: var(--violet);
+			border: 0;
+			clip-path: polygon(
+				50% 0, 63% 30%, 88% 12%, 70% 38%, 100% 50%,
+				70% 63%, 88% 88%, 62% 70%, 50% 100%, 37% 70%,
+				12% 88%, 30% 62%, 0 50%, 30% 38%, 12% 12%, 37% 30%
+			);
+		}
+
+		/* ---------- Buttons ---------- */
+		.actions {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 14px;
+			margin-top: 28px;
+		}
+
+		.button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 14px;
+			min-height: 56px;
+			padding: 12px 21px;
+			background: var(--violet);
+			color: var(--white);
+			border: var(--line);
+			border-radius: var(--radius);
+			box-shadow: 4px 5px 0 var(--outline);
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 1.3;
+			text-decoration: none;
+			transition: transform 0.18s var(--ease), box-shadow 0.18s ease;
+		}
+
+		.button:hover {
+			transform: translate(-2px, -3px);
+			box-shadow: 6px 8px 0 var(--outline);
+		}
+
+		.button:active {
+			transform: translate(3px, 4px);
+			box-shadow: 1px 1px 0 var(--outline);
+		}
+
+		.button-secondary {
+			background: var(--white);
+			color: var(--ink);
+		}
+
+		.button-trakteer {
+			background: var(--amber);
+			color: var(--outline);
+		}
+
+		.button-pink {
+			background: var(--pink);
+			color: var(--outline);
+		}
+
+		.button-sm {
+			min-height: 44px;
+			padding: 8px 16px;
+			font-size: 14px;
+			border-radius: 13px;
+			box-shadow: 3px 4px 0 var(--outline);
+		}
+
+		.button-sm:hover {
+			box-shadow: 4px 6px 0 var(--outline);
+		}
+
+		.button-icon {
+			font-size: 20px;
+			line-height: 1;
+		}
+
+		/* ---------- Header ---------- */
+		.site-header {
+			display: flex;
+			align-items: center;
+			gap: 24px;
+			max-width: 1272px;
+			margin-inline: auto;
+			padding: 26px 24px;
+		}
+
+		.brand-lockup {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			flex-shrink: 0;
+			text-decoration: none;
+		}
+
+		.brand-name {
+			font-family: var(--font-display);
+			font-size: 32px;
+			font-weight: 800;
+			line-height: 1;
+			letter-spacing: -0.05em;
+		}
+
+		.site-header nav {
+			margin-left: auto;
+		}
+
+		.site-header ul {
+			display: flex;
+			align-items: center;
+			gap: 28px;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-weight: 600;
+			font-size: 16px;
+		}
+
+		.site-header nav a {
+			display: block;
+			padding-block: 8px;
+			text-decoration: none;
+		}
+
+		.site-header nav a:hover {
+			text-decoration: underline;
+			text-decoration-thickness: 2px;
+		}
+
+		.header-cta {
+			display: flex;
+			align-items: center;
+			gap: 14px;
+			flex-shrink: 0;
+		}
+
+		.header-pieces {
+			display: flex;
+			align-items: center;
+		}
+
+		.header-pieces span {
+			width: 20px;
+			height: 20px;
+			margin-left: -4px;
+			border-radius: 50%;
+			border: var(--detail);
+			background: var(--pink);
+		}
+
+		.header-pieces span:nth-child(2) {
+			background: var(--amber);
+		}
+
+		.header-pieces span:nth-child(3) {
+			background: var(--mint);
+		}
+
+		/* ---------- Hero ---------- */
+		.hero {
+			max-width: 1272px;
+			margin-inline: auto;
+			padding: 8px 24px 0;
+		}
+
+		.hero-spread {
+			display: grid;
+			grid-template-columns: 1.15fr 1fr;
+			align-items: center;
+			gap: 20px;
+		}
+
+		.hero-copy {
+			position: relative;
+			z-index: 1;
+			padding-block: 12px 32px;
+		}
+
+		.eyebrow {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			padding: 6px 14px;
+			margin-bottom: 18px;
+			background: var(--pale-violet);
+			border: var(--detail);
+			border-radius: 999px;
+			box-shadow: 3px 3px 0 var(--violet);
+			font-size: 14px;
+			font-weight: 700;
+		}
+
+		.hero h1 span {
+			color: var(--violet);
+		}
+
+		.hero-description {
+			max-width: 540px;
+			margin-top: 24px;
+			font-size: 18px;
+		}
+
+		.hero-trust {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			margin-top: 24px;
+			font-size: 14px;
+			font-weight: 600;
+		}
+
+		.hero-trust::before {
+			content: "";
+			width: 16px;
+			height: 16px;
+			flex-shrink: 0;
+			border-radius: 50%;
+			border: var(--detail);
+			background: var(--mint);
+		}
+
+		.hero-art {
+			width: 100%;
+		}
+
+		.hero-art svg {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		/* ---------- Stats Strip ---------- */
+		.stats-strip {
+			position: relative;
+			z-index: 2;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			margin-top: 22px;
+			padding: 24px 20px;
+			background: var(--white);
+			border: var(--line);
+			border-radius: 28px;
+			box-shadow: 0 8px 0 var(--mint), 0 11px 0 var(--outline);
+		}
+
+		.stat {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 16px;
+			min-width: 0;
+			padding-inline: 10px;
+		}
+
+		.stat + .stat {
+			border-left: 2px solid #e9e4ef;
+		}
+
+		.stat .shape-mark {
+			width: 30px;
+			height: 34px;
+		}
+
+		.stat-value {
+			display: block;
+			font-family: var(--font-display);
+			font-size: 32px;
+			font-weight: 800;
+			line-height: 1.08;
+			letter-spacing: -0.04em;
+		}
+
+		.stat-label {
+			display: block;
+			margin-top: 3px;
+			font-size: 14px;
+			font-weight: 700;
+		}
+
+		.stat-trend {
+			display: block;
+			margin-top: 2px;
+			font-size: 12px;
+			opacity: 0.78;
+		}
+
+		/* ---------- First Book (About + Features + Showcase) ---------- */
+		.first-book {
+			position: relative;
+			margin: 84px 48px 0;
+			background: var(--white);
+			border: var(--line);
+			border-radius: 48px 48px 36px 36px;
+			box-shadow: 10px 11px 0 var(--violet), 13px 14px 0 var(--outline);
+		}
+
+		.first-book::before {
+			content: "";
+			position: absolute;
+			top: -20px;
+			left: 54%;
+			width: 152px;
+			height: 36px;
+			background: var(--pink);
+			border: var(--line);
+			border-radius: 10px;
+			transform: rotate(-5deg);
+		}
+
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 64px;
+			padding: 68px 60px 56px;
+		}
+
+		.about-heading .shape-mark {
+			background: var(--amber);
+			margin-bottom: 20px;
+			transform: rotate(9deg);
+		}
+
+		.about-heading h2 {
+			font-size: clamp(28px, 3vw, 42px);
+			line-height: 1.14;
+		}
+
+		.about-reading {
+			padding-top: 10px;
+		}
+
+		.about-reading p + p {
+			margin-top: 18px;
+		}
+
+		.section-heading {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 28px;
+		}
+
+		.section-heading h2 {
+			max-width: 720px;
+		}
+
+		.section-heading .shape-mark {
+			width: 72px;
+			height: 72px;
+		}
+
+		.section-subtitle {
+			margin-top: 14px;
+			max-width: 640px;
+		}
+
+		.features {
+			padding: 12px 60px 52px;
+		}
+
+		.features .section-heading {
+			margin-bottom: 30px;
+		}
+
+		.heading-ornament {
+			display: flex;
+			align-items: flex-end;
+			gap: 7px;
+			flex-shrink: 0;
+		}
+
+		.heading-ornament span {
+			width: 28px;
+			height: 34px;
+			border-radius: 16px 16px 8px 8px;
+			background: var(--mint);
+			border: var(--line);
+		}
+
+		.heading-ornament span:nth-child(2) {
+			background: var(--violet);
+			height: 56px;
+		}
+
+		.heading-ornament span:nth-child(3) {
+			background: var(--pink);
+			height: 76px;
+		}
+
+		.feature-grid {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			background: var(--paper);
+			border: var(--line);
+			border-radius: 30px;
+			overflow: hidden;
+		}
+
+		.feature {
+			padding: 28px 25px 30px;
+		}
+
+		.feature:nth-child(-n+3) {
+			border-bottom: 2px dashed var(--rule-muted);
+		}
+
+		.feature:not(:nth-child(3n)) {
+			border-right: 2px dashed var(--rule-muted);
+		}
+
+		.feature-icon {
+			display: grid;
+			place-items: center;
+			width: 66px;
+			height: 64px;
+			margin-bottom: 20px;
+			border: var(--line);
+			border-radius: 20px;
+			background: var(--mint);
+			box-shadow: 3px 3px 0 var(--outline);
+		}
+
+		.feature:nth-child(2) .feature-icon {
+			background: var(--amber);
+			border-radius: 50%;
+		}
+
+		.feature:nth-child(3) .feature-icon {
+			background: var(--pink);
+			border-radius: 32px 32px 12px 12px;
+		}
+
+		.feature:nth-child(4) .feature-icon {
+			background: var(--pink);
+			border-radius: 12px 32px;
+		}
+
+		.feature:nth-child(5) .feature-icon {
+			background: var(--violet);
+			color: var(--white);
+			border-radius: 50%;
+		}
+
+		.feature:nth-child(6) .feature-icon {
+			background: var(--amber);
+		}
+
+		.feature p {
+			margin-top: 10px;
+			font-size: 16px;
+		}
+
+		/* ---------- Showcase (Journal Staggered Cards) ---------- */
+		.showcase {
+			padding: 16px 60px 58px;
+		}
+
+		.showcase .section-heading {
+			margin-bottom: 34px;
+		}
+
+		.showcase .shape-mark {
+			background: var(--pink);
+			transform: rotate(13deg);
+		}
+
+		.journal-grid {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 28px;
+		}
+
+		.journal {
+			min-width: 0;
+			position: relative;
+		}
+
+		.journal:nth-child(2) {
+			padding-top: 32px;
+		}
+
+		.journal:nth-child(3) {
+			padding-top: 64px;
+		}
+
+		.journal-image {
+			height: 240px;
+			border: var(--line);
+			border-radius: 110px 110px 25px 25px;
+			background: var(--pale-violet);
+			box-shadow: 5px 5px 0 var(--violet);
+			overflow: hidden;
+		}
+
+		.journal:nth-child(2) .journal-image {
+			background: #141a2e;
+			border-radius: 50% 50% 50% 20px;
+			box-shadow: 5px 5px 0 var(--pink);
+		}
+
+		.journal:nth-child(3) .journal-image {
+			background: var(--pale-mint);
+			border-radius: 28px 95px 28px 28px;
+			box-shadow: 5px 5px 0 var(--amber);
+		}
+
+		.journal-image svg {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+
+		.journal-copy {
+			padding: 20px 4px 0;
+		}
+
+		.journal-tag {
+			display: inline-block;
+			margin-bottom: 10px;
+			padding: 3px 10px;
+			font-size: 13px;
+			font-weight: 700;
+			border: var(--detail);
+			border-radius: 999px;
+			background: var(--paper);
+		}
+
+		.journal-description {
+			margin-top: 10px;
+			font-size: 16px;
+		}
+
+		.journal-meta {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			margin-top: 16px;
+			font-size: 14px;
+			font-weight: 700;
+		}
+
+		.journal-meta::before {
+			content: "";
+			width: 9px;
+			height: 9px;
+			border-radius: 50%;
+			background: var(--violet);
+		}
+
+		.journal:nth-child(2) .journal-meta::before {
+			background: var(--pink);
+		}
+
+		.journal:nth-child(3) .journal-meta::before {
+			background: var(--amber);
+		}
+
+		/* ---------- Assembly Book (Process + Interactive Prompts) ---------- */
+		.assembly-book {
+			margin: 82px 72px 0;
+			position: relative;
+		}
+
+		.process {
+			padding: 0 12px;
+		}
+
+		.process-heading {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			gap: 24px;
+			margin-bottom: 34px;
+		}
+
+		.process-heading p {
+			max-width: 310px;
+		}
+
+		.process-track {
+			position: relative;
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 32px;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.process-track::before {
+			content: "";
+			position: absolute;
+			top: 35px;
+			left: 0;
+			width: 92%;
+			height: 8px;
+			background: var(--white);
+			border-block: var(--detail);
+		}
+
+		.process-track li {
+			position: relative;
+		}
+
+		.step-number {
+			position: relative;
+			display: grid;
+			place-items: center;
+			width: 72px;
+			height: 72px;
+			margin-bottom: 24px;
+			border: var(--line);
+			border-radius: 50%;
+			background: var(--amber);
+			box-shadow: 4px 4px 0 var(--outline);
+			font-family: var(--font-display);
+			font-size: 34px;
+			font-weight: 800;
+		}
+
+		.process-track li:nth-child(2) .step-number {
+			background: var(--pink);
+			border-radius: 24px;
+			transform: rotate(5deg);
+		}
+
+		.process-track li:nth-child(3) .step-number {
+			background: var(--mint);
+			border-radius: 36px 36px 13px 13px;
+		}
+
+		.process-track p {
+			margin-top: 10px;
+			font-size: 16px;
+		}
+
+		/* ---------- Benefits / Prompt Builder ---------- */
+		.benefits {
+			position: relative;
+			display: grid;
+			grid-template-columns: 0.92fr 1.38fr;
+			gap: 48px;
+			margin-top: 52px;
+			padding: 52px 42px 46px;
+			border: var(--line);
+			border-radius: 40px;
+			background: var(--pale-mint);
+			box-shadow: 8px 8px 0 var(--mint), 11px 11px 0 var(--outline);
+		}
+
+		.benefits::before {
+			content: "";
+			position: absolute;
+			top: -22px;
+			right: 26%;
+			width: 28px;
+			height: 42px;
+			border: var(--line);
+			border-radius: 15px;
+			background: var(--violet);
+			transform: rotate(15deg);
+		}
+
+		.benefits-heading h2 {
+			font-size: clamp(32px, 3.2vw, 46px);
+		}
+
+		.benefits-art {
+			position: relative;
+			width: 225px;
+			height: 122px;
+			margin-top: 28px;
+		}
+
+		.benefit-piece {
+			position: absolute;
+			width: 70px;
+			height: 70px;
+			border: var(--line);
+			box-shadow: 3px 3px 0 var(--outline);
+		}
+
+		.piece-one {
+			top: 16px;
+			left: 0;
+			background: var(--violet);
+			border-radius: 50% 50% 12px 12px;
+			transform: rotate(-13deg);
+		}
+
+		.piece-two {
+			top: 40px;
+			left: 62px;
+			background: var(--pink);
+			border-radius: 50%;
+		}
+
+		.piece-three {
+			top: 0;
+			left: 118px;
+			background: var(--amber);
+			border-radius: var(--radius);
+			transform: rotate(17deg);
+		}
+
+		.piece-four {
+			top: 72px;
+			left: 150px;
+			width: 46px;
+			height: 46px;
+			background: var(--mint);
+			border-radius: 50% 12px;
+			transform: rotate(-10deg);
+		}
+
+		.prompt-studio {
+			background: var(--white);
+			border: var(--line);
+			border-radius: 26px;
+			padding: 24px;
+			box-shadow: 5px 5px 0 var(--outline);
+		}
+
+		.prompt-tabs {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin-bottom: 16px;
+		}
+
+		.pill-btn {
+			padding: 8px 14px;
+			border: var(--detail);
+			border-radius: 12px;
+			background: var(--paper);
+			font-size: 14px;
+			font-weight: 700;
+			box-shadow: 2px 2px 0 var(--outline);
+			transition: transform 0.15s var(--ease), background 0.15s ease;
+		}
+
+		.pill-btn:hover {
+			transform: translateY(-2px);
+		}
+
+		.pill-btn[aria-pressed="true"] {
+			background: var(--violet);
+			color: var(--white);
+		}
+
+		.topic-input-row {
+			display: flex;
+			gap: 10px;
+			margin-bottom: 14px;
+			flex-wrap: wrap;
+		}
+
+		.topic-input {
+			flex: 1 1 240px;
+			padding: 10px 14px;
+			border: var(--detail);
+			border-radius: 12px;
+			background: var(--paper);
+			font-family: var(--font-reading);
+			font-size: 15px;
+			color: var(--ink);
+		}
+
+		.prompt-box {
+			position: relative;
+			padding: 16px;
+			border: var(--detail);
+			border-radius: 16px;
+			background: var(--pale-violet);
+			font-family: var(--font-mono);
+			font-size: 14px;
+			line-height: 1.55;
+			white-space: pre-wrap;
+			word-break: break-word;
+		}
+
+		.prompt-footer {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 12px;
+			margin-top: 14px;
+			flex-wrap: wrap;
+		}
+
+		.prompt-hint {
+			font-size: 13px;
+			font-weight: 600;
+			opacity: 0.82;
+		}
+
+		/* ---------- Prompt Cards + Adab / Hadits Cards ---------- */
+		.cards-section {
+			max-width: 1268px;
+			margin: 88px auto 0;
+			padding-inline: 24px;
+		}
+
+		.cards-section .section-heading .shape-mark {
+			background: var(--pink);
+			width: 56px;
+			height: 56px;
+		}
+
+		.quote-grid {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			align-items: stretch;
+			gap: 26px;
+			margin-top: 34px;
+		}
+
+		.quote {
+			display: flex;
+			flex-direction: column;
+			padding: 26px 26px 28px;
+			border: var(--line);
+			border-radius: 30px 30px 30px 8px;
+			background: var(--white);
+			box-shadow: 6px 6px 0 var(--amber);
+		}
+
+		.quote:nth-child(2) {
+			box-shadow: 6px 6px 0 var(--violet);
+		}
+
+		.quote:nth-child(3) {
+			box-shadow: 6px 6px 0 var(--pink);
+		}
+
+		.quote-badge {
+			display: inline-block;
+			align-self: flex-start;
+			padding: 4px 12px;
+			margin-bottom: 14px;
+			border: var(--detail);
+			border-radius: 999px;
+			background: var(--amber);
+			font-size: 13px;
+			font-weight: 700;
+		}
+
+		.quote:nth-child(2) .quote-badge {
+			background: var(--pale-violet);
+		}
+
+		.quote:nth-child(3) .quote-badge {
+			background: var(--mint);
+		}
+
+		.quote h3 {
+			margin-bottom: 10px;
+		}
+
+		.quote p {
+			font-size: 15px;
+		}
+
+		.arabic-box {
+			margin: 14px 0 10px;
+			padding: 12px 14px;
+			border: var(--detail);
+			border-radius: 14px;
+			background: var(--paper);
+			font-family: var(--font-arabic);
+			font-size: 21px;
+			line-height: 1.8;
+			text-align: right;
+			direction: rtl;
+		}
+
+		.quote-foot {
+			margin-top: auto;
+			padding-top: 16px;
+			font-size: 13px;
+			font-weight: 700;
+		}
+
+		/* ---------- Comparison Book / FAQ ---------- */
+		.comparison-book {
+			margin: 80px 48px 0;
+			background: var(--white);
+			border: var(--line);
+			border-radius: 44px;
+		}
+
+		.faq {
+			display: grid;
+			grid-template-columns: 0.78fr 1.45fr;
+			gap: 56px;
+			padding: 64px 48px 54px;
+		}
+
+		.faq h2 {
+			font-size: clamp(32px, 3.2vw, 44px);
+		}
+
+		.question-piece {
+			display: grid;
+			place-items: center;
+			width: 132px;
+			height: 132px;
+			margin-top: 26px;
+			border: var(--line);
+			border-radius: 50%;
+			background: var(--amber);
+			box-shadow: 6px 6px 0 var(--outline);
+			font-family: var(--font-display);
+			font-size: 92px;
+			font-weight: 800;
+			line-height: 1;
+			transform: rotate(-13deg);
+		}
+
+		.disclosures {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+		}
+
+		details {
+			border: var(--detail);
+			border-radius: var(--radius);
+			background: var(--paper);
+			overflow: hidden;
+		}
+
+		summary {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 18px;
+			padding: 17px 20px;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 1.45;
+			list-style: none;
+		}
+
+		summary::-webkit-details-marker {
+			display: none;
+		}
+
+		summary::after {
+			content: "+";
+			font-family: var(--font-display);
+			font-size: 28px;
+			font-weight: 600;
+			line-height: 1;
+			flex-shrink: 0;
+		}
+
+		details[open] {
+			background: var(--pale-mint);
+		}
+
+		details[open] summary::after {
+			content: "−";
+		}
+
+		summary:hover {
+			background: var(--pale-violet);
+		}
+
+		details p {
+			padding: 0 20px 18px;
+			font-size: 15px;
+		}
+
+		/* ---------- Back Cover / Closing CTA ---------- */
+		.back-cover {
+			position: relative;
+			margin-top: 80px;
+			background: var(--pale-mint);
+			border-top: var(--line);
+			border-radius: 72px 72px 0 0;
+		}
+
+		.closing {
+			position: relative;
+			text-align: center;
+			padding: 74px 120px 68px;
+		}
+
+		.closing-copy {
+			position: relative;
+			z-index: 1;
+			max-width: 780px;
+			margin-inline: auto;
+		}
+
+		.closing h2 {
+			font-size: clamp(38px, 5vw, 72px);
+			line-height: 1.05;
+		}
+
+		.closing-copy p {
+			max-width: 600px;
+			margin: 22px auto 0;
+			font-size: 18px;
+		}
+
+		.closing .actions {
+			justify-content: center;
+		}
+
+		.closing-confetti {
+			position: absolute;
+			top: 34px;
+			width: 140px;
+			height: 280px;
+		}
+
+		.confetti-left {
+			left: 32px;
+		}
+
+		.confetti-right {
+			right: 32px;
+		}
+
+		.closing-confetti .shape-mark {
+			position: absolute;
+			width: 68px;
+			height: 68px;
+		}
+
+		.closing-confetti .shape-mark:first-child {
+			top: 26px;
+			left: 28px;
+			transform: rotate(-18deg);
+		}
+
+		.closing-confetti .shape-mark:nth-child(2) {
+			top: 162px;
+			left: 6px;
+			width: 84px;
+			height: 84px;
+		}
+
+		.closing-confetti .shape-mark:nth-child(3) {
+			top: 108px;
+			left: 84px;
+			width: 40px;
+			height: 40px;
+			background: var(--pink);
+		}
+
+		.confetti-right .shape-mark:first-child {
+			background: var(--pink);
+			transform: rotate(17deg);
+		}
+
+		.confetti-right .shape-mark:nth-child(2) {
+			background: var(--amber);
+			left: 48px;
+		}
+
+		.confetti-right .shape-mark:nth-child(3) {
+			background: var(--violet);
+			left: 6px;
+		}
+
+		/* ---------- Footer ---------- */
+		.footer {
+			margin: 0 26px;
+			padding: 46px 50px 28px;
+			background: var(--ink);
+			color: var(--paper);
+			border-radius: 40px 40px 0 0;
+		}
+
+		.footer-main {
+			display: grid;
+			grid-template-columns: 1fr 1.6fr;
+			gap: 56px;
+		}
+
+		.footer .shape-mark {
+			width: 42px;
+			height: 42px;
+			background: var(--mint);
+		}
+
+		.footer .brand-name {
+			font-size: 30px;
+		}
+
+		.footer-company > p {
+			margin-top: 16px;
+			font-size: 14px;
+			max-width: 360px;
+			opacity: 0.9;
+		}
+
+		.footer-groups {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 24px;
+		}
+
+		.footer h3 {
+			font-size: 16px;
+			letter-spacing: 0;
+			color: var(--mint);
+		}
+
+		.footer ul {
+			margin: 14px 0 0;
+			padding: 0;
+			list-style: none;
+			font-size: 14px;
+			line-height: 1.75;
+		}
+
+		.footer li + li {
+			margin-top: 6px;
+		}
+
+		.footer a {
+			text-decoration: none;
+		}
+
+		.footer a:hover {
+			text-decoration: underline;
+		}
+
+		.footer-bottom {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 16px;
+			margin-top: 38px;
+			padding-top: 22px;
+			border-top: 1px solid #6b7385;
+			font-size: 13px;
+			opacity: 0.9;
+		}
+
+		/* ---------- Responsive ---------- */
+		@media (max-width: 1080px) {
+			.first-book, .comparison-book {
+				margin-inline: 24px;
+			}
+			.assembly-book {
+				margin-inline: 24px;
+			}
+			.about, .features, .showcase {
+				padding-inline: 32px;
+			}
+			.benefits {
+				grid-template-columns: 1fr;
+			}
+			.closing {
+				padding-inline: 40px;
+			}
+			.closing-confetti {
+				display: none;
+			}
+		}
+
+		@media (max-width: 820px) {
+			.site-header {
+				flex-wrap: wrap;
+				gap: 14px;
+			}
+			.site-header nav {
+				order: 3;
+				flex-basis: 100%;
+				margin-left: 0;
+			}
+			.site-header ul {
+				flex-wrap: wrap;
+				gap: 16px;
+			}
+			.header-pieces {
+				display: none;
+			}
+			.hero-spread,
+			.about,
+			.feature-grid,
+			.journal-grid,
+			.process-track,
+			.quote-grid,
+			.faq,
+			.footer-main,
+			.footer-groups,
+			.stats-strip {
+				grid-template-columns: minmax(0, 1fr);
+			}
+			.stat + .stat {
+				border-left: 0;
+				border-top: 2px solid #e9e4ef;
+				padding-top: 14px;
+			}
+			.stat {
+				justify-content: flex-start;
+			}
+			.feature:nth-child(-n+3),
+			.feature:not(:nth-child(3n)) {
+				border-right: 0;
+				border-bottom: 2px dashed var(--rule-muted);
+			}
+			.feature:last-child {
+				border-bottom: 0;
+			}
+			.journal:nth-child(2),
+			.journal:nth-child(3) {
+				padding-top: 0;
+			}
+			.process-track::before {
+				display: none;
+			}
+			.first-book, .comparison-book, .assembly-book {
+				margin-inline: 14px;
+				margin-top: 52px;
+			}
+			.about, .features, .showcase, .faq {
+				padding: 28px 20px;
+			}
+			.benefits {
+				padding: 28px 18px;
+			}
+			.footer {
+				margin-inline: 12px;
+				padding: 32px 22px 24px;
+			}
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.button, .pill-btn {
+				transition: none;
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="page">
+	<section id="hero" data-section="hero" class="hero">
+		<header class="site-header">
+			<a class="brand-lockup" href="#hero">
+				<span class="shape-mark flower" aria-hidden="true"></span>
+				<span class="brand-name">RemotionKit</span>
+			</a>
+			<nav aria-label="Navigasi utama">
+				<ul>
+					<li><a href="#fitur">Kemampuan AI</a></li>
+					<li><a href="#contoh">Contoh Video</a></li>
+					<li><a href="#cara-pakai">Cara Pakai</a></li>
+					<li><a href="#prompt-builder">Prompt</a></li>
+					<li><a href="#faq">FAQ</a></li>
+				</ul>
+			</nav>
+			<div class="header-cta">
+				<a
+					class="button button-trakteer button-sm"
+					href="https://trakteer.id/limitless7/tip"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<span>Trakteer Kopi ☕</span>
+				</a>
+				<div class="header-pieces" aria-hidden="true"><span></span><span></span><span></span></div>
+			</div>
+		</header>
+
+		<div class="hero-spread">
+			<div class="hero-copy">
+				<div class="eyebrow">Cukup buka folder + ngobrol dengan AI</div>
+				<h1>Bikin video edukasi <span>cukup pakai prompt AI</span></h1>
+				<p class="hero-description">
+					Template siap pakai untuk bikin video 9:16 (TikTok, Instagram Reels, Facebook, YouTube Shorts).
+					Kamu tidak perlu jago coding atau setting terminal ribet — AI kamu yang riset, cari footage bebas komersial,
+					nulis naskah, bikin suara ElevenLabs, animasi 2D/3D, QA, sampai kirim ke HP.
+				</p>
+				<div class="actions">
+					<a class="button" href="#prompt-builder">
+						<span>Salin Prompt Mulai</span>
+						<span class="button-icon" aria-hidden="true">↗</span>
+					</a>
+					<a
+						class="button button-trakteer"
+						href="https://trakteer.id/limitless7/tip"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<span>Trakteer Tip ☕</span>
+						<span class="button-icon" aria-hidden="true">♥</span>
+					</a>
+					<a
+						class="button button-secondary"
+						href="https://github.com/antonprafanto/remotion"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<span>Repo GitHub</span>
+						<span class="button-icon" aria-hidden="true">↗</span>
+					</a>
+				</div>
+				<p class="hero-trust">Jalan di Antigravity, Claude Code, Cursor, Windsurf &amp; Codex — tersedia mode simulasi gratis tanpa API key</p>
+			</div>
+
+			<!-- Ilustrasi Geometris Murni (Tanpa Makhluk Bernyawa) -->
+			<div class="hero-art" aria-hidden="true">
+				<svg viewBox="0 0 560 540" fill="none">
+					<g stroke="#252b3a" stroke-width="4.5" stroke-linejoin="round">
+						<!-- Kertas Grid Latar + Shadow Keras -->
+						<rect x="46" y="76" width="440" height="390" rx="34" fill="#252b3a" stroke="none" />
+						<rect x="34" y="64" width="440" height="390" rx="34" fill="#fffdf5" />
+						<!-- Garis Kisi -->
+						<path d="M58 118H450M58 164H450M58 210H450M58 256H450M58 302H450M58 348H450M58 394H450M94 84V434M144 84V434M194 84V434M244 84V434M294 84V434M344 84V434M394 84V434" stroke="#e4dfef" stroke-width="1.8" />
+
+						<!-- Kartu Video Portrait 9:16 -->
+						<rect x="242" y="96" width="194" height="328" rx="26" fill="#252b3a" stroke="none" />
+						<rect x="232" y="86" width="194" height="328" rx="26" fill="#6434df" />
+						<!-- Blok Judul Kuning di Layar 9:16 -->
+						<rect x="252" y="114" width="84" height="22" rx="8" fill="#ffd05b" stroke-width="3" />
+						<rect x="252" y="150" width="152" height="16" rx="6" fill="#fffdf5" stroke-width="2.5" />
+						<rect x="252" y="176" width="118" height="16" rx="6" fill="#9bf1cd" stroke-width="2.5" />
+						<!-- Visual Planet / Orbit Geometris di Tengah -->
+						<circle cx="329" cy="272" r="48" fill="#ffd05b" stroke-width="3.5" />
+						<ellipse cx="329" cy="272" rx="74" ry="20" transform="rotate(-18 329 272)" fill="none" stroke="#9bf1cd" stroke-width="4" />
+						<circle cx="388" cy="252" r="10" fill="#ff78c5" stroke-width="3" />
+						<!-- Pita Caption di Bawah -->
+						<rect x="258" y="352" width="142" height="34" rx="12" fill="#252b3a" stroke-width="2.5" />
+						<rect x="272" y="364" width="54" height="10" rx="4" fill="#ffd05b" stroke="none" />
+						<rect x="334" y="364" width="52" height="10" rx="4" fill="#fffdf5" stroke="none" />
+
+						<!-- Kartu Prompt AI Mengambang di Kiri -->
+						<rect x="64" y="138" width="184" height="114" rx="22" fill="#252b3a" stroke="none" />
+						<rect x="54" y="128" width="184" height="114" rx="22" fill="#9bf1cd" />
+						<rect x="74" y="150" width="80" height="18" rx="7" fill="#fffdf5" stroke-width="2.5" />
+						<path d="M74 188H210M74 210H174" stroke="#252b3a" stroke-width="6" stroke-linecap="round" />
+
+						<!-- Kartu Audio / Waveform ElevenLabs -->
+						<rect x="76" y="290" width="176" height="96" rx="22" fill="#252b3a" stroke="none" />
+						<rect x="66" y="280" width="176" height="96" rx="22" fill="#ff78c5" />
+						<path d="M94 342V314M116 348V306M138 354V300M160 344V312M182 350V304M204 340V316" stroke="#252b3a" stroke-width="7" stroke-linecap="round" />
+
+						<!-- Aksen Bentuk Geometris Mengambang -->
+						<circle cx="446" cy="96" r="26" fill="#ffd05b" />
+						<polygon points="440,86 440,106 458,96" fill="#252b3a" stroke="none" />
+						<rect x="116" y="408" width="58" height="28" rx="14" fill="#ffd05b" transform="rotate(-8 145 422)" />
+					</g>
+				</svg>
+			</div>
+		</div>
+
+		<div class="stats-strip" aria-label="Ringkasan kemampuan starter kit">
+			<div class="stat">
+				<span class="shape-mark dot" aria-hidden="true"></span>
+				<div>
+					<span class="stat-value">3 Langkah</span>
+					<span class="stat-label">Cukup Prompt AI</span>
+					<span class="stat-trend">Clone → Setup → Jadi MP4</span>
+				</div>
+			</div>
+			<div class="stat">
+				<span class="shape-mark arch" aria-hidden="true"></span>
+				<div>
+					<span class="stat-value">2 Gaya</span>
+					<span class="stat-label">2D SVG &amp; 3D WebGL</span>
+					<span class="stat-trend">Contoh jadi siap pakai</span>
+				</div>
+			</div>
+			<div class="stat">
+				<span class="shape-mark leaf" aria-hidden="true"></span>
+				<div>
+					<span class="stat-value">-14 LUFS</span>
+					<span class="stat-label">Audio Standar Sosmed</span>
+					<span class="stat-trend">Normalisasi 2-pass + SFX</span>
+				</div>
+			</div>
+			<div class="stat">
+				<span class="shape-mark spark" aria-hidden="true"></span>
+				<div>
+					<span class="stat-value">4 Platform</span>
+					<span class="stat-label">Caption &amp; Upload HP</span>
+					<span class="stat-trend">TikTok, IG, FB, Shorts</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- First Book -->
+	<div class="first-book">
+		<section id="tentang" data-section="about" class="about">
+			<div class="about-heading">
+				<span class="shape-mark" aria-hidden="true"></span>
+				<h2>Semua aturan teknis sudah tertanam, AI kamu tinggal eksekusi.</h2>
+			</div>
+			<div class="about-reading">
+				<p>
+					Biasanya kalau menyuruh AI bikin video dari nol, hasilnya berantakan: timing teks tidak pas suara,
+					teks ketutup tombol TikTok, animasi membeku, atau kuota ElevenLabs terbuang percuma.
+				</p>
+				<p>
+					Di repositori ini, file <strong>CLAUDE.md</strong> dan <strong>AGENTS.md</strong> menjadi otak autopilot
+					untuk AI coding agent kamu. Begitu folder dibuka, AI langsung paham cara riset, menyusun naskah
+					yang sinkron per kata lewat <code>beat()</code>, mengecek Safe Zone, hingga merender MP4 berkualitas tinggi.
+				</p>
+			</div>
+		</section>
+
+		<section id="fitur" data-section="features" class="features">
+			<div class="section-heading">
+				<div>
+					<h2>Apa saja yang dikerjakan AI otomatis?</h2>
+					<p class="section-subtitle">Mulai dari ide kosong sampai file video siap upload ke empat platform sekaligus.</p>
+				</div>
+				<div class="heading-ornament" aria-hidden="true"><span></span><span></span><span></span></div>
+			</div>
+
+			<div class="feature-grid">
+				<article class="feature">
+					<div class="feature-icon" aria-hidden="true">
+						<svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#252b3a" stroke-width="3">
+							<circle cx="16" cy="16" r="10" />
+							<path d="M23.5 23.5L31 31" stroke-linecap="round" />
+						</svg>
+					</div>
+					<h3>1. Riset Tren &amp; Sumber Primer</h3>
+					<p>AI mencari topik relevan dan memverifikasi angka ke dokumen resmi atau jurnal ilmiah, bukan mengarang fakta.</p>
+				</article>
+
+				<article class="feature">
+					<div class="feature-icon" aria-hidden="true">
+						<svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#252b3a" stroke-width="3">
+							<rect x="5" y="7" width="26" height="22" rx="5" />
+							<path d="M10 23L16 17L21 21L26 15" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</div>
+					<h3>2. Footage Komersial &amp; Adab Visual</h3>
+					<p>Mencari aset Pexels/Wikimedia yang aman secara lisensi, atau menggambar diagram benda mati/alam tanpa makhluk bernyawa.</p>
+				</article>
+
+				<article class="feature">
+					<div class="feature-icon" aria-hidden="true">
+						<svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#252b3a" stroke-width="3">
+							<path d="M7 10H29M7 18H23M7 26H19" stroke-linecap="round" />
+						</svg>
+					</div>
+					<h3>3. Naskah HTPC &amp; Markup Ucapan</h3>
+					<p>Struktur Hook-Tension-Payoff padat, lengkap dengan markup <code>{tampil|ucap}</code> supaya caption rapi &amp; ejaan TTS pas.</p>
+				</article>
+
+				<article class="feature">
+					<div class="feature-icon" aria-hidden="true">
+						<svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#252b3a" stroke-width="3">
+							<polygon points="18,5 30,12 30,24 18,31 6,24 6,12" />
+							<path d="M18 5V18L30 12M18 18L6 12" />
+						</svg>
+					</div>
+					<h3>4. Motion Graphics 2D &amp; 3D WebGL</h3>
+					<p>Diagram SVG editorial dan scene 3D Three.js + shader GLSL yang seluruh animasinya otomatis mengikuti ketukan kata.</p>
+				</article>
+
+				<article class="feature">
+					<div class="feature-icon" aria-hidden="true">
+						<svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#ffffff" stroke-width="3">
+							<path d="M7 22V14M13 26V10M19 29V7M25 24V12M31 20V16" stroke-linecap="round" />
+						</svg>
+					</div>
+					<h3>5. Suara ElevenLabs + Simulasi Gratis</h3>
+					<p>Bisa latihan full render gratis pakai mode <code>--estimate</code> sebelum memakai kredit ElevenLabs dan bedah per kata.</p>
+				</article>
+
+				<article class="feature">
+					<div class="feature-icon" aria-hidden="true">
+						<svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#252b3a" stroke-width="3">
+							<rect x="10" y="4" width="16" height="28" rx="4" />
+							<path d="M15 27H21" stroke-linecap="round" />
+						</svg>
+					</div>
+					<h3>6. QA Otomatis &amp; Upload HP (ADB)</h3>
+					<p>Cek Safe Zone, deteksi frame beku/hitam, normalisasi audio <code>-14 LUFS</code>, hingga kirim file + caption ke HP via USB.</p>
+				</article>
+			</div>
+		</section>
+
+		<section id="contoh" data-section="showcase" class="showcase">
+			<div class="section-heading">
+				<div>
+					<h2>Sudah ada 2 video contoh siap jalan</h2>
+					<p class="section-subtitle">Keduanya 100% ringan &amp; mandiri (tanpa butuh download stok video eksternal).</p>
+				</div>
+				<span class="shape-mark" aria-hidden="true"></span>
+			</div>
+
+			<div class="journal-grid">
+				<article class="journal">
+					<div class="journal-image">
+						<svg viewBox="0 0 360 240" fill="none">
+							<rect width="360" height="240" fill="#f1ebff" />
+							<path d="M0 40H360M0 80H360M0 120H360M0 160H360M0 200H360M60 0V240M120 0V240M180 0V240M240 0V240M300 0V240" stroke="#dfd4fb" stroke-width="1.5" />
+							<rect x="86" y="44" width="198" height="142" rx="10" fill="#252b3a" />
+							<rect x="78" y="36" width="198" height="142" rx="10" fill="#fffdf5" stroke="#252b3a" stroke-width="3.5" />
+							<line x1="177" y1="36" x2="177" y2="178" stroke="#252b3a" stroke-width="3" />
+							<line x1="177" y1="107" x2="276" y2="107" stroke="#252b3a" stroke-width="3" />
+							<rect x="226" y="107" width="50" height="35" fill="#ffd05b" stroke="#252b3a" stroke-width="2.5" />
+							<text x="128" y="114" text-anchor="middle" font-family="Host Grotesk, sans-serif" font-weight="800" font-size="24" fill="#252b3a">A1</text>
+							<text x="251" y="130" text-anchor="middle" font-family="Host Grotesk, sans-serif" font-weight="800" font-size="14" fill="#252b3a">A4</text>
+						</svg>
+					</div>
+					<div class="journal-copy">
+						<span class="journal-tag">Contoh #1 · Editorial 2D + SVG</span>
+						<h3>Kenapa Kertas A4 Ukurannya 210 × 297 mm?</h3>
+						<p class="journal-description">Animasi lipat kertas A0 → A4, rumus rasio 1 : √2, grafik perbandingan, dan efek suara sintesis.</p>
+						<div class="journal-meta"><code>src/videos/kertas-a4/</code></div>
+					</div>
+				</article>
+
+				<article class="journal">
+					<div class="journal-image">
+						<svg viewBox="0 0 360 240" fill="none">
+							<rect width="360" height="240" fill="#141a2e" />
+							<circle cx="70" cy="48" r="2.5" fill="#fffdf5" />
+							<circle cx="290" cy="44" r="3" fill="#ffd05b" />
+							<circle cx="310" cy="180" r="2" fill="#9bf1cd" />
+							<circle cx="110" cy="96" r="46" fill="#ffd05b" stroke="#fffdf5" stroke-width="3" />
+							<circle cx="256" cy="152" r="28" fill="#6434df" stroke="#9bf1cd" stroke-width="3" />
+							<path d="M150 110L224 140" stroke="#ffd05b" stroke-width="4" stroke-dasharray="10 8" stroke-linecap="round" />
+							<circle cx="195" cy="128" r="7" fill="#ff78c5" />
+						</svg>
+					</div>
+					<div class="journal-copy">
+						<span class="journal-tag">Contoh #2 · 3D WebGL Three.js</span>
+						<h3>Cahaya Matahari Butuh 8 Menit 19 Detik</h3>
+						<p class="journal-description">Matahari &amp; planet prosedural GLSL, berkas foton 3D, kamera mengorbit, serta label proyeksi 3D→2D.</p>
+						<div class="journal-meta"><code>src/videos/cahaya-matahari/</code></div>
+					</div>
+				</article>
+
+				<article class="journal">
+					<div class="journal-image">
+						<svg viewBox="0 0 360 240" fill="none">
+							<rect width="360" height="240" fill="#e9fff5" />
+							<rect x="64" y="48" width="232" height="146" rx="18" fill="#252b3a" />
+							<rect x="56" y="40" width="232" height="146" rx="18" fill="#ffffff" stroke="#252b3a" stroke-width="3.5" />
+							<rect x="76" y="62" width="90" height="24" rx="8" fill="#9bf1cd" stroke="#252b3a" stroke-width="2.5" />
+							<rect x="76" y="102" width="188" height="16" rx="6" fill="#f1ebff" stroke="#252b3a" stroke-width="2" />
+							<rect x="76" y="130" width="140" height="16" rx="6" fill="#ffd05b" stroke="#252b3a" stroke-width="2" />
+						</svg>
+					</div>
+					<div class="journal-copy">
+						<span class="journal-tag">Hemat Kredit · Mode Simulasi</span>
+						<h3>Uji Animasi Gratis Sebelum Pakai ElevenLabs</h3>
+						<p class="journal-description">AI otomatis membangun timeline estimasi dulu untuk memvalidasi durasi &amp; layout sebelum membuat audio.</p>
+						<div class="journal-meta"><code>npm run estimate &lt;slug&gt;</code></div>
+					</div>
+				</article>
+			</div>
+		</section>
+	</div>
+
+	<!-- Assembly Book: 3 Steps + Interactive Prompt Studio -->
+	<div class="assembly-book">
+		<section id="cara-pakai" data-section="process" class="process">
+			<div class="process-heading">
+				<h2>Cukup 3 langkah, tanpa setting manual</h2>
+				<p>Teman-teman tinggal buka foldernya di AI coding agent lalu paste prompt di bawah ini.</p>
+			</div>
+
+			<ol class="process-track">
+				<li>
+					<div class="step-number">1</div>
+					<h3>Clone &amp; Buka di AI Editor</h3>
+					<p>Download atau <code>git clone</code> repo ini, lalu buka foldernya di Antigravity, Claude Code, Cursor, atau Codex.</p>
+				</li>
+				<li>
+					<div class="step-number">2</div>
+					<h3>Paste Prompt Setup</h3>
+					<p>Suruh AI menyiapkan Node.js, <code>ffmpeg</code>, paket npm, dan efek suara otomatis sesuai laptopmu.</p>
+				</li>
+				<li>
+					<div class="step-number">3</div>
+					<h3>Paste Prompt Bikin Video</h3>
+					<p>Tulis topik pilihanmu (atau suruh AI cari yang lagi tren), review draf naskah, lalu tunggu MP4 jadinya.</p>
+				</li>
+			</ol>
+		</section>
+
+		<section id="prompt-builder" data-section="prompts" class="benefits">
+			<div class="benefits-heading">
+				<h2>Tinggal salin &amp; tempel prompt ini</h2>
+				<p class="section-subtitle">
+					Pilih jenis tugasnya di sebelah kanan, isi topik jika perlu, lalu klik tombol <strong>Salin Prompt</strong>.
+				</p>
+				<div class="benefits-art" aria-hidden="true">
+					<span class="benefit-piece piece-one"></span>
+					<span class="benefit-piece piece-two"></span>
+					<span class="benefit-piece piece-three"></span>
+					<span class="benefit-piece piece-four"></span>
+				</div>
+			</div>
+
+			<div class="prompt-studio">
+				<div class="prompt-tabs" role="group" aria-label="Pilih template prompt">
+					<button class="pill-btn" type="button" data-prompt-kind="setup" aria-pressed="true">1. Setup Laptop</button>
+					<button class="pill-btn" type="button" data-prompt-kind="create2d" aria-pressed="false">2. Bikin Video (2D)</button>
+					<button class="pill-btn" type="button" data-prompt-kind="create3d" aria-pressed="false">3. Bikin Video (3D)</button>
+					<button class="pill-btn" type="button" data-prompt-kind="brand" aria-pressed="false">4. Ganti Nama Channel</button>
+					<button class="pill-btn" type="button" data-prompt-kind="adb" aria-pressed="false">5. Upload via HP</button>
+				</div>
+
+				<div class="topic-input-row" id="topicRow" hidden>
+					<input
+						id="topicInput"
+						class="topic-input"
+						type="text"
+						placeholder="Tulis topik/nama channel kamu (opsional)..."
+						aria-label="Topik atau nama channel"
+					/>
+				</div>
+
+				<div class="prompt-box" id="promptOutput"></div>
+
+				<div class="prompt-footer">
+					<span class="prompt-hint" id="promptHint">Jalankan pertama kali setelah membuka folder proyek di AI editor.</span>
+					<button class="button button-sm" type="button" id="copyPromptBtn">
+						<span id="copyBtnLabel">Salin Prompt</span>
+					</button>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!-- Prompt Cards & Adab Visual / Hadits -->
+	<section id="adab-visual" data-section="adab" class="cards-section">
+		<div class="section-heading">
+			<h2>Aturan yang otomatis dijaga AI</h2>
+			<span class="shape-mark" aria-hidden="true"></span>
+		</div>
+
+		<div class="quote-grid">
+			<article class="quote">
+				<span class="quote-badge">Hemat Kredit</span>
+				<h3>Persetujuan Sebelum Suara AI</h3>
+				<p>
+					AI akan menguji animasi dengan <code>npm run estimate</code> (gratis) dan selalu meminta persetujuanmu pada naskah
+					sebelum memanggil API ElevenLabs.
+				</p>
+				<div class="quote-foot">Aman untuk akun ElevenLabs gratis maupun berbayar</div>
+			</article>
+
+			<article class="quote">
+				<span class="quote-badge">Keamanan</span>
+				<h3>API Key Tetap Pribadi</h3>
+				<p>
+					Aturan di <code>CLAUDE.md</code> &amp; <code>AGENTS.md</code> melarang AI membaca/mencetak isi <code>.env</code>, dan file
+					<code>.env</code> otomatis diabaikan GitHub.
+				</p>
+				<div class="quote-foot">Aman saat kolaborasi &amp; fork repo</div>
+			</article>
+
+			<article class="quote">
+				<span class="quote-badge">Prinsip Syariat</span>
+				<h3>Jangan Generate Makhluk Bernyawa</h3>
+				<p>
+					Dalam Islam, membuat gambar makhluk bernyawa (manusia/hewan) dilarang. AI diarahkan memakai benda mati, diagram, grafik,
+					tumbuhan, dan fenomena alam.
+				</p>
+				<div class="arabic-box" lang="ar">
+					إِنَّ أَشَدَّ النَّاسِ عَذَابًا عِنْدَ اللَّهِ يَوْمَ الْقِيَامَةِ الْمُصَوِّرُونَ
+				</div>
+				<div class="quote-foot">Shahih al-Bukhari No. 5950 &amp; 2225 · Shahih Muslim No. 2109</div>
+			</article>
+		</div>
+	</section>
+
+	<!-- FAQ -->
+	<div class="comparison-book">
+		<section id="faq" data-section="faq" class="faq">
+			<div>
+				<h2>Pertanyaan yang sering muncul</h2>
+				<div class="question-piece" aria-hidden="true">?</div>
+			</div>
+
+			<div class="disclosures">
+				<details open>
+					<summary>Apakah saya harus paham React, Remotion, atau terminal?</summary>
+					<p>
+						Tidak perlu. Cukup buka folder proyek di AI editor (Antigravity, Claude Code, Cursor, atau Codex), lalu kirim
+						prompt bahasa Indonesia biasa. AI akan memasang kebutuhan laptop dan menulis kodenya otomatis.
+					</p>
+				</details>
+				<details>
+					<summary>Apakah harus langsung punya API key ElevenLabs berbayar?</summary>
+					<p>
+						Tidak wajib di awal. Kamu bisa langsung mencoba pratinjau, animasi, dan render penuh memakai mode simulasi
+						gratis (<code>--estimate</code>). API key ElevenLabs baru dibutuhkan saat ingin menghasilkan narasi suara AI sungguhan.
+					</p>
+				</details>
+				<details>
+					<summary>Bagaimana AI membantu cari footage &amp; upload ke HP?</summary>
+					<p>
+						AI bisa mencari aset bebas komersial (Pexels / Wikimedia Commons) sekaligus mencatat kreditnya ke layar penutup.
+						Untuk upload, jika HP Android tersambung kabel USB (USB Debugging aktif), <code>scripts/hp.mjs</code> membantu kirim MP4 + caption ke HP.
+					</p>
+				</details>
+				<details>
+					<summary>Apa dalil hadits shahih larangan meng-generate makhluk bernyawa?</summary>
+					<p>
+						Dalam <strong>Shahih al-Bukhari No. 5950 &amp; Shahih Muslim No. 2109</strong>: <em>"Sesungguhnya manusia yang paling berat siksanya
+						di sisi Allah pada hari Kiamat adalah al-mushawwirun (pembuat gambar makhluk bernyawa)."</em> Dan dalam
+						<strong>Shahih al-Bukhari No. 2225</strong>, Ibnu Abbas memberi solusi: <em>"Jika engkau tetap harus membuat gambar, buatlah gambar pohon ini — segala sesuatu yang tidak memiliki ruh."</em>
+					</p>
+				</details>
+			</div>
+		</section>
+	</div>
+
+	<!-- Back Cover CTA + Trakteer -->
+	<div class="back-cover">
+		<section id="closing" data-section="closing" class="closing">
+			<div class="closing-confetti confetti-left" aria-hidden="true">
+				<span class="shape-mark spark"></span>
+				<span class="shape-mark arch"></span>
+				<span class="shape-mark dot"></span>
+			</div>
+			<div class="closing-confetti confetti-right" aria-hidden="true">
+				<span class="shape-mark leaf"></span>
+				<span class="shape-mark flower"></span>
+				<span class="shape-mark dot"></span>
+			</div>
+
+			<div class="closing-copy">
+				<h2>Siap bikin video edukasi pertamamu cukup lewat prompt?</h2>
+				<p>
+					Clone repositorinya sekarang, buka di AI favoritmu, dan kalau starter kit ini bermanfaat buat belajarmu,
+					kamu bisa traktir kopi sebagai bentuk dukungan.
+				</p>
+				<div class="actions">
+					<a
+						class="button"
+						href="https://github.com/antonprafanto/remotion"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<span>Buka Repo di GitHub</span>
+						<span class="button-icon" aria-hidden="true">↗</span>
+					</a>
+					<a
+						class="button button-trakteer"
+						href="https://trakteer.id/limitless7/tip"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<span>Trakteer Tip ☕</span>
+						<span class="button-icon" aria-hidden="true">♥</span>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="footer-main">
+				<div class="footer-company">
+					<div class="brand-lockup">
+						<span class="shape-mark flower" aria-hidden="true"></span>
+						<span class="brand-name">RemotionKit</span>
+					</div>
+					<p>
+						Starter kit video edukasi pendek 9:16 berbasis AI prompt — Remotion, Three.js, ElevenLabs, dan ffmpeg.
+					</p>
+				</div>
+
+				<div class="footer-groups">
+					<div>
+						<h3>Navigasi</h3>
+						<ul>
+							<li><a href="#fitur">Kemampuan AI</a></li>
+							<li><a href="#contoh">Contoh Video</a></li>
+							<li><a href="#cara-pakai">Cara Pakai</a></li>
+							<li><a href="#prompt-builder">Template Prompt</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>Repositori</h3>
+						<ul>
+							<li><a href="https://github.com/antonprafanto/remotion" target="_blank" rel="noopener noreferrer">GitHub Repo</a></li>
+							<li><a href="https://github.com/antonprafanto/remotion/blob/main/CLAUDE.md" target="_blank" rel="noopener noreferrer">CLAUDE.md</a></li>
+							<li><a href="https://github.com/antonprafanto/remotion/blob/main/AGENTS.md" target="_blank" rel="noopener noreferrer">AGENTS.md</a></li>
+							<li><a href="https://github.com/antonprafanto/remotion/blob/main/docs/referensi-teknis.md" target="_blank" rel="noopener noreferrer">Referensi Teknis</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3>Dukungan</h3>
+						<ul>
+							<li><a href="https://trakteer.id/limitless7/tip" target="_blank" rel="noopener noreferrer">Trakteer (limitless7) ☕</a></li>
+							<li><a href="#adab-visual">Adab Visual &amp; Hadits</a></li>
+							<li><a href="#faq">FAQ</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<p>© 2026 Remotion AI Video Kit · Dibuat agar siapa pun bisa produksi video edukasi cukup lewat prompt.</p>
+				<p>Lisensi kode: MIT · Tanpa makhluk bernyawa</p>
+			</div>
+		</footer>
+	</div>
+</div>
+
+<script>
+	const PROMPTS = {
+		setup: {
+			hasInput: false,
+			placeholder: '',
+			hint: 'Jalankan pertama kali setelah membuka folder proyek di AI editor.',
+			build: () =>
+`Tolong setup proyek ini di laptop saya sampai siap pakai.
+Cek dan pasang kebutuhan yang kurang (Node.js, ffmpeg, npm install, npm run setup).
+Kalau nanti saya mau pakai suara ElevenLabs, jelaskan cara pasang API key ke file .env dengan aman.`
+		},
+		create2d: {
+			hasInput: true,
+			placeholder: 'Contoh: Kenapa ban pesawat diisi nitrogen? (kosongkan agar AI cari topik tren)',
+			hint: 'AI akan riset sumber primer, tulis naskah HTPC, minta ACC sebelum ElevenLabs, lalu render MP4 2D.',
+			build: (val) => {
+				const topic = val.trim() || 'carikan 3 topik menarik yang lagi ramai di Indonesia lalu tunggu saya pilih';
+				return `Buatkan 1 video edukasi pendek bergaya Editorial 2D (seperti contoh src/videos/kertas-a4) tentang: ${topic}.
+
+Tolong ikuti semua aturan di CLAUDE.md:
+1. Riset data & sumber primer yang valid.
+2. Jangan pernah meng-generate gambar/ilustrasi makhluk bernyawa (manusia/hewan). Gunakan diagram, benda mati, peta, atau tumbuhan.
+3. Susun draf naskah dulu dan uji pakai mode gratis (npm run estimate), lalu minta persetujuan saya sebelum membuat suara ElevenLabs.
+4. Setelah saya setujui, buat suara, QA tampilannya (lint, stills --debug, beku.py), render MP4 final, dan siapkan caption untuk TikTok, IG, FB, & YouTube Shorts.`;
+			}
+		},
+		create3d: {
+			hasInput: true,
+			placeholder: 'Contoh: Seberapa dalam Palung Mariana?',
+			hint: 'Memakai Three.js WebGL + shader GLSL + PostFX seperti contoh src/videos/cahaya-matahari.',
+			build: (val) => {
+				const topic = val.trim() || 'fenomena sains atau antariksa yang memicu rasa oh gitu ternyata';
+				return `Buatkan 1 video edukasi pendek bergaya 3D WebGL Three.js (seperti contoh src/videos/cahaya-matahari) tentang: ${topic}.
+
+Ikuti aturan di CLAUDE.md:
+1. Riset sumber ilmiah/resmi terlebih dahulu.
+2. Visual 3D hanya memakai objek tak bernyawa (planet, benda, diagram ruang, partikel cahaya).
+3. Minta persetujuan naskah dulu sebelum memanggil API ElevenLabs.
+4. Lakukan QA stills + render MP4 final (-14 LUFS) dan buatkan caption 4 sosmed.`;
+			}
+		},
+		brand: {
+			hasInput: true,
+			placeholder: 'Contoh: @faktasingkat',
+			hint: 'Otomatis mengubah watermark, logo EndCard, dan metadata MP4 di src/brand/theme.ts.',
+			build: (val) => {
+				const handle = val.trim() || '@namachannelku';
+				const clean = handle.replace(/^@/, '');
+				return `Tolong ganti branding channel di src/brand/theme.ts menjadi nama "${clean}" dan handle "${handle.startsWith('@') ? handle : '@' + handle}".
+Setelah diubah, jalankan npm run lint dan cek pratinjau frame 0 (npm run stills) untuk memastikan watermark tampil rapi.`;
+			}
+		},
+		adb: {
+			hasInput: false,
+			placeholder: '',
+			hint: 'Untuk HP Android yang sudah dicolok kabel USB dengan USB Debugging aktif.',
+			build: () =>
+`Saya sudah menyambungkan HP Android ke laptop lewat kabel USB dengan USB Debugging aktif.
+Tolong cek koneksi dengan adb devices, kirim video MP4 & cover terbaru dari folder out/ ke galeri HP lewat scripts/hp.mjs, siapkan caption versi ASCII, dan bantu proses upload/jadwal ke TikTok, Instagram Reels, Facebook, dan YouTube Shorts.`
+		}
+	};
+
+	let activeKind = 'setup';
+	const buttons = document.querySelectorAll('[data-prompt-kind]');
+	const topicRow = document.getElementById('topicRow');
+	const topicInput = document.getElementById('topicInput');
+	const promptOutput = document.getElementById('promptOutput');
+	const promptHint = document.getElementById('promptHint');
+	const copyBtn = document.getElementById('copyPromptBtn');
+	const copyLabel = document.getElementById('copyBtnLabel');
+
+	function renderPrompt() {
+		const cfg = PROMPTS[activeKind];
+		topicRow.hidden = !cfg.hasInput;
+		if (cfg.hasInput) {
+			topicInput.placeholder = cfg.placeholder;
+		}
+		promptHint.textContent = cfg.hint;
+		promptOutput.textContent = cfg.build(topicInput.value);
+	}
+
+	buttons.forEach((btn) => {
+		btn.addEventListener('click', () => {
+			activeKind = btn.dataset.promptKind;
+			buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+			topicInput.value = '';
+			renderPrompt();
+		});
+	});
+
+	topicInput.addEventListener('input', renderPrompt);
+
+	copyBtn.addEventListener('click', async () => {
+		try {
+			await navigator.clipboard.writeText(promptOutput.textContent);
+			copyLabel.textContent = 'Tersalin ✓';
+		} catch {
+			const range = document.createRange();
+			range.selectNodeContents(promptOutput);
+			const sel = window.getSelection();
+			sel.removeAllRanges();
+			sel.addRange(range);
+			copyLabel.textContent = 'Terblok — tekan Ctrl+C';
+		}
+		setTimeout(() => {
+			copyLabel.textContent = 'Salin Prompt';
+		}, 1800);
+	});
+
+	renderPrompt();
+</script>
+</body>
+</html>

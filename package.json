@@ -1,0 +1,57 @@
+{
+	"name": "ooohgt-tutorial",
+	"version": "1.0.0",
+	"description": "Starter kit & tutorial membuat video edukasi pendek 9:16 (Remotion + Three.js + ElevenLabs + ffmpeg)",
+	"private": true,
+	"license": "MIT",
+	"scripts": {
+		"dev": "remotion studio",
+		"setup": "tsx scripts/sfx-kit.mts && tsx scripts/cek-setup.mts",
+		"cek-setup": "tsx scripts/cek-setup.mts",
+		"sfx-kit": "tsx scripts/sfx-kit.mts",
+		"demo-footage": "tsx scripts/demo-footage.mts",
+		"voices": "tsx scripts/voices.mts",
+		"voice": "tsx scripts/voice.mts",
+		"estimate": "tsx scripts/voice.mts --estimate",
+		"timeline": "tsx scripts/timeline.mts",
+		"ucapan": "tsx scripts/ucapan.mts",
+		"voice:ganti": "tsx scripts/voice-ganti.mts",
+		"voice:kata": "tsx scripts/voice-kata.mts",
+		"still": "remotion still",
+		"stills": "tsx scripts/stills.mts",
+		"lint": "tsc --noEmit",
+		"final": "tsx scripts/render.mts",
+		"finish": "tsx scripts/finish.mts",
+		"bersih-temp": "tsx scripts/bersih-temp.mts"
+	},
+	"dependencies": {
+		"@react-three/drei": "^10.7.9",
+		"@react-three/fiber": "^9.8.2",
+		"@react-three/postprocessing": "^3.2.1",
+		"@remotion/captions": "4.0.537",
+		"@remotion/cli": "4.0.537",
+		"@remotion/google-fonts": "4.0.537",
+		"@remotion/media": "4.0.537",
+		"@remotion/noise": "4.0.537",
+		"@remotion/paths": "4.0.537",
+		"@remotion/three": "4.0.537",
+		"postprocessing": "^6.39.5",
+		"react": "19.2.3",
+		"react-dom": "19.2.3",
+		"remotion": "4.0.537",
+		"three": "^0.186.1"
+	},
+	"devDependencies": {
+		"@remotion/bundler": "4.0.537",
+		"@remotion/renderer": "4.0.537",
+		"@types/node": "^22.0.0",
+		"@types/react": "19.2.7",
+		"@types/three": "^0.186.0",
+		"@types/web": "0.0.166",
+		"tsx": "4.23.15",
+		"typescript": "5.9.3"
+	},
+	"engines": {
+		"node": "^20.19.0 || ^22.13.0 || >=24"
+	}
+}

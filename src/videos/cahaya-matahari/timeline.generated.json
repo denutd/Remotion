@@ -1,0 +1,408 @@
+{
+	"fps": 30,
+	"estimated": true,
+	"audio": null,
+	"audioDuration": 40.33000000000005,
+	"durationInFrames": 1225,
+	"segments": [
+		{
+			"id": "hook",
+			"start": 0,
+			"end": 7.49
+		},
+		{
+			"id": "speed",
+			"start": 7.49,
+			"end": 15.17
+		},
+		{
+			"id": "distance",
+			"start": 15.17,
+			"end": 30.360000000000024
+		},
+		{
+			"id": "meaning",
+			"start": 30.360000000000024,
+			"end": 37.73000000000004
+		},
+		{
+			"id": "outro",
+			"start": 37.73000000000004,
+			"end": 40.83000000000005
+		}
+	],
+	"words": [
+		{
+			"display": "Cahaya",
+			"start": 0.25,
+			"end": 0.7799999999999999,
+			"segment": 0
+		},
+		{
+			"display": "Matahari",
+			"start": 0.82,
+			"end": 1.5,
+			"segment": 0
+		},
+		{
+			"display": "yang",
+			"start": 1.54,
+			"end": 1.77,
+			"segment": 0
+		},
+		{
+			"display": "baru",
+			"start": 1.81,
+			"end": 2.19,
+			"segment": 0
+		},
+		{
+			"display": "menyentuh",
+			"start": 2.23,
+			"end": 2.76,
+			"segment": 0
+		},
+		{
+			"display": "wajahmu",
+			"start": 2.8,
+			"end": 3.3299999999999996,
+			"segment": 0
+		},
+		{
+			"display": "itu...",
+			"start": 3.3699999999999997,
+			"end": 3.7499999999999996,
+			"segment": 0
+		},
+		{
+			"display": "ternyata",
+			"start": 4.21,
+			"end": 4.74,
+			"segment": 0
+		},
+		{
+			"display": "berangkat",
+			"start": 4.78,
+			"end": 5.3100000000000005,
+			"segment": 0
+		},
+		{
+			"display": "delapan",
+			"start": 5.3500000000000005,
+			"end": 5.880000000000001,
+			"segment": 0
+		},
+		{
+			"display": "menit",
+			"start": 5.920000000000001,
+			"end": 6.300000000000001,
+			"segment": 0
+		},
+		{
+			"display": "yang",
+			"start": 6.340000000000001,
+			"end": 6.57,
+			"segment": 0
+		},
+		{
+			"display": "lalu.",
+			"start": 6.61,
+			"end": 6.99,
+			"segment": 0
+		},
+		{
+			"display": "Padahal",
+			"start": 7.69,
+			"end": 8.22,
+			"segment": 1
+		},
+		{
+			"display": "cahaya",
+			"start": 8.26,
+			"end": 8.79,
+			"segment": 1
+		},
+		{
+			"display": "itu",
+			"start": 8.83,
+			"end": 9.21,
+			"segment": 1
+		},
+		{
+			"display": "hal",
+			"start": 9.25,
+			"end": 9.48,
+			"segment": 1
+		},
+		{
+			"display": "tercepat",
+			"start": 9.52,
+			"end": 10.049999999999999,
+			"segment": 1
+		},
+		{
+			"display": "di",
+			"start": 10.09,
+			"end": 10.32,
+			"segment": 1
+		},
+		{
+			"display": "alam",
+			"start": 10.36,
+			"end": 10.74,
+			"segment": 1
+		},
+		{
+			"display": "semesta",
+			"start": 10.78,
+			"end": 11.309999999999999,
+			"segment": 1
+		},
+		{
+			"display": "—",
+			"start": 11.35,
+			"end": 11.58,
+			"segment": 1
+		},
+		{
+			"display": "hampir",
+			"start": 11.62,
+			"end": 12,
+			"segment": 1
+		},
+		{
+			"display": "300",
+			"start": 12.04,
+			"end": 12.84,
+			"segment": 1
+		},
+		{
+			"display": "ribu",
+			"start": 12.879999999999999,
+			"end": 13.26,
+			"segment": 1
+		},
+		{
+			"display": "kilometer",
+			"start": 13.299999999999999,
+			"end": 13.979999999999999,
+			"segment": 1
+		},
+		{
+			"display": "tiap",
+			"start": 14.02,
+			"end": 14.25,
+			"segment": 1
+		},
+		{
+			"display": "detik.",
+			"start": 14.29,
+			"end": 14.67,
+			"segment": 1
+		},
+		{
+			"display": "Jarak",
+			"start": 15.37,
+			"end": 15.75,
+			"segment": 2
+		},
+		{
+			"display": "rata-rata",
+			"start": 15.79,
+			"end": 16.47,
+			"segment": 2
+		},
+		{
+			"display": "Bumi",
+			"start": 16.509999999999998,
+			"end": 16.889999999999997,
+			"segment": 2
+		},
+		{
+			"display": "ke",
+			"start": 16.93,
+			"end": 17.16,
+			"segment": 2
+		},
+		{
+			"display": "Matahari",
+			"start": 17.2,
+			"end": 17.88,
+			"segment": 2
+		},
+		{
+			"display": "sekitar",
+			"start": 17.919999999999998,
+			"end": 18.45,
+			"segment": 2
+		},
+		{
+			"display": "149,6",
+			"start": 18.49,
+			"end": 21.270000000000003,
+			"segment": 2
+		},
+		{
+			"display": "juta",
+			"start": 21.310000000000006,
+			"end": 21.690000000000005,
+			"segment": 2
+		},
+		{
+			"display": "kilometer.",
+			"start": 21.730000000000008,
+			"end": 22.410000000000007,
+			"segment": 2
+		},
+		{
+			"display": "Waktu",
+			"start": 22.870000000000008,
+			"end": 23.250000000000007,
+			"segment": 2
+		},
+		{
+			"display": "tempuhnya:",
+			"start": 23.29000000000001,
+			"end": 23.82000000000001,
+			"segment": 2
+		},
+		{
+			"display": "499",
+			"start": 24.06000000000001,
+			"end": 26.420000000000016,
+			"segment": 2
+		},
+		{
+			"display": "detik,",
+			"start": 26.460000000000015,
+			"end": 26.840000000000014,
+			"segment": 2
+		},
+		{
+			"display": "atau",
+			"start": 27.080000000000016,
+			"end": 27.460000000000015,
+			"segment": 2
+		},
+		{
+			"display": "8",
+			"start": 27.500000000000018,
+			"end": 28.03000000000002,
+			"segment": 2
+		},
+		{
+			"display": "menit",
+			"start": 28.070000000000018,
+			"end": 28.450000000000017,
+			"segment": 2
+		},
+		{
+			"display": "19",
+			"start": 28.49000000000002,
+			"end": 29.44000000000002,
+			"segment": 2
+		},
+		{
+			"display": "detik.",
+			"start": 29.48000000000002,
+			"end": 29.86000000000002,
+			"segment": 2
+		},
+		{
+			"display": "Jadi",
+			"start": 30.560000000000024,
+			"end": 30.940000000000023,
+			"segment": 3
+		},
+		{
+			"display": "setiap",
+			"start": 30.980000000000025,
+			"end": 31.360000000000024,
+			"segment": 3
+		},
+		{
+			"display": "menatap",
+			"start": 31.400000000000027,
+			"end": 31.930000000000028,
+			"segment": 3
+		},
+		{
+			"display": "Matahari,",
+			"start": 31.970000000000027,
+			"end": 32.65000000000003,
+			"segment": 3
+		},
+		{
+			"display": "kita",
+			"start": 32.89000000000003,
+			"end": 33.27000000000003,
+			"segment": 3
+		},
+		{
+			"display": "sebenarnya",
+			"start": 33.31000000000003,
+			"end": 33.99000000000003,
+			"segment": 3
+		},
+		{
+			"display": "melihat",
+			"start": 34.03000000000003,
+			"end": 34.56000000000003,
+			"segment": 3
+		},
+		{
+			"display": "keadaannya",
+			"start": 34.60000000000003,
+			"end": 35.13000000000003,
+			"segment": 3
+		},
+		{
+			"display": "delapan",
+			"start": 35.17000000000003,
+			"end": 35.70000000000003,
+			"segment": 3
+		},
+		{
+			"display": "menit",
+			"start": 35.74000000000003,
+			"end": 36.12000000000003,
+			"segment": 3
+		},
+		{
+			"display": "di",
+			"start": 36.16000000000003,
+			"end": 36.39000000000003,
+			"segment": 3
+		},
+		{
+			"display": "masa",
+			"start": 36.430000000000035,
+			"end": 36.81000000000004,
+			"segment": 3
+		},
+		{
+			"display": "lalu.",
+			"start": 36.85000000000004,
+			"end": 37.23000000000004,
+			"segment": 3
+		},
+		{
+			"display": "Oh...",
+			"start": 37.93000000000004,
+			"end": 38.16000000000004,
+			"segment": 4
+		},
+		{
+			"display": "gitu",
+			"start": 38.62000000000005,
+			"end": 39.00000000000005,
+			"segment": 4
+		},
+		{
+			"display": "ternyata.",
+			"start": 39.04000000000005,
+			"end": 39.57000000000005,
+			"segment": 4
+		}
+	]
+}

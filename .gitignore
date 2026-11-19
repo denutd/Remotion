@@ -1,0 +1,7 @@
+node_modules/
+out/
+.env
+*.log
+data-raw/
+public/footage/
+public/voice/
