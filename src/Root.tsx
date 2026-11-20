@@ -9,6 +9,8 @@ import {EksimKambuhCover} from './videos/eksim-kambuh/Cover';
 import {EksimKambuh, timeline as eksimKambuh} from './videos/eksim-kambuh/EksimKambuh';
 import {EksimLukaCover} from './videos/eksim-luka/Cover';
 import {EksimLuka, timeline as eksimLuka} from './videos/eksim-luka/EksimLuka';
+import {EksimSkincareCover} from './videos/eksim-skincare/Cover';
+import {EksimSkincare, timeline as eksimSkincare} from './videos/eksim-skincare/EksimSkincare';
 import {GatalEksimCover} from './videos/gatal-eksim/Cover';
 import {GatalEksim, timeline as gatalEksim} from './videos/gatal-eksim/GatalEksim';
 import {KertasA4Cover} from './videos/kertas-a4/Cover';
@@ -94,5 +96,16 @@ export const RemotionRoot: FC = () => (
 			defaultProps={{debug: false}}
 		/>
 		<Still id="EksimLukaCover" component={EksimLukaCover} width={W} height={H} />
+
+		<Composition
+			id="EksimSkincare"
+			component={EksimSkincare}
+			durationInFrames={eksimSkincare.durationInFrames}
+			fps={FPS}
+			width={W}
+			height={H}
+			defaultProps={{debug: false}}
+		/>
+		<Still id="EksimSkincareCover" component={EksimSkincareCover} width={W} height={H} />
 	</>
 );

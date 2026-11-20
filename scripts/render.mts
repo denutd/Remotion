@@ -47,6 +47,11 @@ const VIDEOS: Record<string, {id: string; title: string; script: string}> = {
 		title: 'Eksim Sampai Luka? Jangan Tunggu Makin Parah!',
 		script: '../src/videos/eksim-luka/script.ts',
 	},
+	'eksim-skincare': {
+		id: 'EksimSkincare',
+		title: 'Sudah Ganti Berbagai Macam Skincare Tapi Eksim Masih Kambuh?',
+		script: '../src/videos/eksim-skincare/script.ts',
+	},
 };
 
 const [slug, ...rest] = process.argv.slice(2);

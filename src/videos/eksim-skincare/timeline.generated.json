@@ -1,0 +1,389 @@
+{
+	"fps": 30,
+	"estimated": false,
+	"audio": "voice/eksim-skincare/voice.mp3",
+	"audioDuration": 28.552,
+	"durationInFrames": 872,
+	"segments": [
+		{
+			"id": "hook",
+			"start": 0,
+			"end": 6.09
+		},
+		{
+			"id": "edukasi",
+			"start": 6.09,
+			"end": 10.010000000000002
+		},
+		{
+			"id": "peradangan",
+			"start": 10.010000000000002,
+			"end": 16.34
+		},
+		{
+			"id": "barrier",
+			"start": 16.34,
+			"end": 21.12
+		},
+		{
+			"id": "solusi",
+			"start": 21.12,
+			"end": 25.240000000000002
+		},
+		{
+			"id": "cta",
+			"start": 25.240000000000002,
+			"end": 29.052
+		}
+	],
+	"words": [
+		{
+			"display": "Sudah",
+			"start": 0.05,
+			"end": 0.386,
+			"segment": 0
+		},
+		{
+			"display": "ganti",
+			"start": 0.415,
+			"end": 0.75,
+			"segment": 0
+		},
+		{
+			"display": "berbagai",
+			"start": 0.779,
+			"end": 1.316,
+			"segment": 0
+		},
+		{
+			"display": "macam",
+			"start": 1.363,
+			"end": 1.699,
+			"segment": 0
+		},
+		{
+			"display": "skincare,",
+			"start": 1.728,
+			"end": 2.332,
+			"segment": 0
+		},
+		{
+			"display": "tapi",
+			"start": 2.384,
+			"end": 2.653,
+			"segment": 0
+		},
+		{
+			"display": "kulit",
+			"start": 2.676,
+			"end": 3.012,
+			"segment": 0
+		},
+		{
+			"display": "masih",
+			"start": 3.041,
+			"end": 3.376,
+			"segment": 0
+		},
+		{
+			"display": "sering",
+			"start": 3.406,
+			"end": 3.808,
+			"segment": 0
+		},
+		{
+			"display": "gatal,",
+			"start": 3.843,
+			"end": 4.246,
+			"segment": 0
+		},
+		{
+			"display": "merah,",
+			"start": 4.281,
+			"end": 4.684,
+			"segment": 0
+		},
+		{
+			"display": "dan",
+			"start": 4.719,
+			"end": 4.92,
+			"segment": 0
+		},
+		{
+			"display": "mengelupas?",
+			"start": 4.938,
+			"end": 5.676,
+			"segment": 0
+		},
+		{
+			"display": "Perlu",
+			"start": 6.29,
+			"end": 6.6,
+			"segment": 1
+		},
+		{
+			"display": "kamu",
+			"start": 6.627,
+			"end": 6.875,
+			"segment": 1
+		},
+		{
+			"display": "tahu,",
+			"start": 6.897,
+			"end": 7.207,
+			"segment": 1
+		},
+		{
+			"display": "eksim",
+			"start": 7.234,
+			"end": 7.545,
+			"segment": 1
+		},
+		{
+			"display": "bukan",
+			"start": 7.571,
+			"end": 7.882,
+			"segment": 1
+		},
+		{
+			"display": "sekadar",
+			"start": 7.909,
+			"end": 8.343,
+			"segment": 1
+		},
+		{
+			"display": "masalah",
+			"start": 8.381,
+			"end": 8.815,
+			"segment": 1
+		},
+		{
+			"display": "kosmetik.",
+			"start": 8.853,
+			"end": 9.411,
+			"segment": 1
+		},
+		{
+			"display": "Ini",
+			"start": 10.21,
+			"end": 10.378,
+			"segment": 2
+		},
+		{
+			"display": "merupakan",
+			"start": 10.393,
+			"end": 10.896,
+			"segment": 2
+		},
+		{
+			"display": "kondisi",
+			"start": 10.94,
+			"end": 11.332,
+			"segment": 2
+		},
+		{
+			"display": "peradangan",
+			"start": 11.366,
+			"end": 11.926,
+			"segment": 2
+		},
+		{
+			"display": "kulit",
+			"start": 11.974,
+			"end": 12.254,
+			"segment": 2
+		},
+		{
+			"display": "yang",
+			"start": 12.279,
+			"end": 12.503,
+			"segment": 2
+		},
+		{
+			"display": "membutuhkan",
+			"start": 12.522,
+			"end": 13.138,
+			"segment": 2
+		},
+		{
+			"display": "perawatan",
+			"start": 13.191,
+			"end": 13.695,
+			"segment": 2
+		},
+		{
+			"display": "sesuai",
+			"start": 13.739,
+			"end": 14.075,
+			"segment": 2
+		},
+		{
+			"display": "penyebab",
+			"start": 14.104,
+			"end": 14.552,
+			"segment": 2
+		},
+		{
+			"display": "dan",
+			"start": 14.591,
+			"end": 14.759,
+			"segment": 2
+		},
+		{
+			"display": "tingkat",
+			"start": 14.773,
+			"end": 15.165,
+			"segment": 2
+		},
+		{
+			"display": "keparahannya.",
+			"start": 15.199,
+			"end": 15.927,
+			"segment": 2
+		},
+		{
+			"display": "Selain",
+			"start": 16.54,
+			"end": 16.893,
+			"segment": 3
+		},
+		{
+			"display": "penanganan",
+			"start": 16.924,
+			"end": 17.512,
+			"segment": 3
+		},
+		{
+			"display": "yang",
+			"start": 17.564,
+			"end": 17.799,
+			"segment": 3
+		},
+		{
+			"display": "tepat,",
+			"start": 17.819,
+			"end": 18.173,
+			"segment": 3
+		},
+		{
+			"display": "menjaga",
+			"start": 18.203,
+			"end": 18.615,
+			"segment": 3
+		},
+		{
+			"display": "kelembapan",
+			"start": 18.651,
+			"end": 19.24,
+			"segment": 3
+		},
+		{
+			"display": "dan",
+			"start": 19.291,
+			"end": 19.467,
+			"segment": 3
+		},
+		{
+			"display": "skin barrier",
+			"start": 19.483,
+			"end": 20.092,
+			"segment": 3
+		},
+		{
+			"display": "juga",
+			"start": 20.122,
+			"end": 20.358,
+			"segment": 3
+		},
+		{
+			"display": "penting.",
+			"start": 20.378,
+			"end": 20.849,
+			"segment": 3
+		},
+		{
+			"display": "Kenali",
+			"start": 21.32,
+			"end": 21.697,
+			"segment": 4
+		},
+		{
+			"display": "Noekoella",
+			"start": 21.73,
+			"end": 22.296,
+			"segment": 4
+		},
+		{
+			"display": "Skin",
+			"start": 22.345,
+			"end": 22.596,
+			"segment": 4
+		},
+		{
+			"display": "Barrier",
+			"start": 22.618,
+			"end": 23.058,
+			"segment": 4
+		},
+		{
+			"display": "untuk",
+			"start": 23.097,
+			"end": 23.411,
+			"segment": 4
+		},
+		{
+			"display": "membantu",
+			"start": 23.438,
+			"end": 23.941,
+			"segment": 4
+		},
+		{
+			"display": "merawat",
+			"start": 23.985,
+			"end": 24.425,
+			"segment": 4
+		},
+		{
+			"display": "kulitmu.",
+			"start": 24.463,
+			"end": 24.966,
+			"segment": 4
+		},
+		{
+			"display": "Cek",
+			"start": 25.44,
+			"end": 25.648,
+			"segment": 5
+		},
+		{
+			"display": "detail",
+			"start": 25.666,
+			"end": 26.081,
+			"segment": 5
+		},
+		{
+			"display": "produknya",
+			"start": 26.118,
+			"end": 26.741,
+			"segment": 5
+		},
+		{
+			"display": "di",
+			"start": 26.795,
+			"end": 26.934,
+			"segment": 5
+		},
+		{
+			"display": "keranjang",
+			"start": 26.946,
+			"end": 27.569,
+			"segment": 5
+		},
+		{
+			"display": "kuning!",
+			"start": 27.623,
+			"end": 28.108,
+			"segment": 5
+		}
+	]
+}
