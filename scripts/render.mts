@@ -37,6 +37,11 @@ const VIDEOS: Record<string, {id: string; title: string; script: string}> = {
 		title: 'Awalnya Cuma Gatal Sedikit, Tapi Sekali Digaruk Malah Susah Berhenti!',
 		script: '../src/videos/gatal-eksim/script.ts',
 	},
+	'eksim-kambuh': {
+		id: 'EksimKambuh',
+		title: 'Kenapa Kulit Eksim Sering Kambuh Padahal Sudah Diobati?',
+		script: '../src/videos/eksim-kambuh/script.ts',
+	},
 };
 
 const [slug, ...rest] = process.argv.slice(2);

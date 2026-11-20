@@ -1,0 +1,564 @@
+{
+	"fps": 30,
+	"estimated": false,
+	"audio": "voice/eksim-kambuh/voice.mp3",
+	"audioDuration": 45.165,
+	"durationInFrames": 1370,
+	"segments": [
+		{
+			"id": "hook",
+			"start": 0,
+			"end": 5.35
+		},
+		{
+			"id": "tension",
+			"start": 5.35,
+			"end": 14.371
+		},
+		{
+			"id": "sains",
+			"start": 14.371,
+			"end": 24.257
+		},
+		{
+			"id": "solusi",
+			"start": 24.257,
+			"end": 37.532999999999994
+		},
+		{
+			"id": "cta",
+			"start": 37.532999999999994,
+			"end": 45.665
+		}
+	],
+	"words": [
+		{
+			"display": "Sudah",
+			"start": 0,
+			"end": 0.383,
+			"segment": 0
+		},
+		{
+			"display": "oles",
+			"start": 0.418,
+			"end": 0.639,
+			"segment": 0
+		},
+		{
+			"display": "salep",
+			"start": 0.662,
+			"end": 0.964,
+			"segment": 0
+		},
+		{
+			"display": "sampai",
+			"start": 1.022,
+			"end": 1.3,
+			"segment": 0
+		},
+		{
+			"display": "habis,",
+			"start": 1.347,
+			"end": 1.834,
+			"segment": 0
+		},
+		{
+			"display": "tapi",
+			"start": 1.858,
+			"end": 2.067,
+			"segment": 0
+		},
+		{
+			"display": "kenapa",
+			"start": 2.09,
+			"end": 2.415,
+			"segment": 0
+		},
+		{
+			"display": "eksim",
+			"start": 2.473,
+			"end": 2.821,
+			"segment": 0
+		},
+		{
+			"display": "selalu",
+			"start": 2.891,
+			"end": 3.17,
+			"segment": 0
+		},
+		{
+			"display": "kambuh",
+			"start": 3.216,
+			"end": 3.541,
+			"segment": 0
+		},
+		{
+			"display": "lagi",
+			"start": 3.564,
+			"end": 3.785,
+			"segment": 0
+		},
+		{
+			"display": "di",
+			"start": 3.831,
+			"end": 3.889,
+			"segment": 0
+		},
+		{
+			"display": "tempat",
+			"start": 3.936,
+			"end": 4.238,
+			"segment": 0
+		},
+		{
+			"display": "yang",
+			"start": 4.284,
+			"end": 4.412,
+			"segment": 0
+		},
+		{
+			"display": "sama?",
+			"start": 4.458,
+			"end": 5.039,
+			"segment": 0
+		},
+		{
+			"display": "Banyak",
+			"start": 5.55,
+			"end": 5.979,
+			"segment": 1
+		},
+		{
+			"display": "yang",
+			"start": 6.06,
+			"end": 6.2,
+			"segment": 1
+		},
+		{
+			"display": "salah",
+			"start": 6.258,
+			"end": 6.525,
+			"segment": 1
+		},
+		{
+			"display": "paham!",
+			"start": 6.571,
+			"end": 7.175,
+			"segment": 1
+		},
+		{
+			"display": "Kebanyakan",
+			"start": 7.454,
+			"end": 8.057,
+			"segment": 1
+		},
+		{
+			"display": "obat",
+			"start": 8.139,
+			"end": 8.417,
+			"segment": 1
+		},
+		{
+			"display": "cuma",
+			"start": 8.464,
+			"end": 8.696,
+			"segment": 1
+		},
+		{
+			"display": "meredakan",
+			"start": 8.754,
+			"end": 9.288,
+			"segment": 1
+		},
+		{
+			"display": "radang",
+			"start": 9.369,
+			"end": 9.683,
+			"segment": 1
+		},
+		{
+			"display": "sesaat,",
+			"start": 9.729,
+			"end": 10.426,
+			"segment": 1
+		},
+		{
+			"display": "tapi",
+			"start": 10.553,
+			"end": 10.832,
+			"segment": 1
+		},
+		{
+			"display": "tidak",
+			"start": 10.902,
+			"end": 11.215,
+			"segment": 1
+		},
+		{
+			"display": "menambal",
+			"start": 11.273,
+			"end": 11.703,
+			"segment": 1
+		},
+		{
+			"display": "lapisan",
+			"start": 11.749,
+			"end": 12.19,
+			"segment": 1
+		},
+		{
+			"display": "pelindung",
+			"start": 12.272,
+			"end": 12.759,
+			"segment": 1
+		},
+		{
+			"display": "kulitmu",
+			"start": 12.806,
+			"end": 13.259,
+			"segment": 1
+		},
+		{
+			"display": "yang",
+			"start": 13.317,
+			"end": 13.468,
+			"segment": 1
+		},
+		{
+			"display": "rusak.",
+			"start": 13.514,
+			"end": 14.187,
+			"segment": 1
+		},
+		{
+			"display": "Ibarat",
+			"start": 14.571,
+			"end": 15.012,
+			"segment": 2
+		},
+		{
+			"display": "dinding",
+			"start": 15.07,
+			"end": 15.43,
+			"segment": 2
+		},
+		{
+			"display": "bata",
+			"start": 15.476,
+			"end": 15.732,
+			"segment": 2
+		},
+		{
+			"display": "yang",
+			"start": 15.801,
+			"end": 15.952,
+			"segment": 2
+		},
+		{
+			"display": "semennya",
+			"start": 16.01,
+			"end": 16.37,
+			"segment": 2
+		},
+		{
+			"display": "hilang,",
+			"start": 16.428,
+			"end": 16.916,
+			"segment": 2
+		},
+		{
+			"display": "air",
+			"start": 17.067,
+			"end": 17.287,
+			"segment": 2
+		},
+		{
+			"display": "kulit",
+			"start": 17.357,
+			"end": 17.624,
+			"segment": 2
+		},
+		{
+			"display": "menguap",
+			"start": 17.694,
+			"end": 18.077,
+			"segment": 2
+		},
+		{
+			"display": "dan",
+			"start": 18.17,
+			"end": 18.309,
+			"segment": 2
+		},
+		{
+			"display": "kuman",
+			"start": 18.39,
+			"end": 18.704,
+			"segment": 2
+		},
+		{
+			"display": "gampang",
+			"start": 18.785,
+			"end": 19.238,
+			"segment": 2
+		},
+		{
+			"display": "masuk",
+			"start": 19.273,
+			"end": 19.54,
+			"segment": 2
+		},
+		{
+			"display": "lagi.",
+			"start": 19.586,
+			"end": 20.132,
+			"segment": 2
+		},
+		{
+			"display": "Makanya",
+			"start": 20.457,
+			"end": 20.979,
+			"segment": 2
+		},
+		{
+			"display": "begitu",
+			"start": 21.049,
+			"end": 21.444,
+			"segment": 2
+		},
+		{
+			"display": "salep",
+			"start": 21.513,
+			"end": 21.769,
+			"segment": 2
+		},
+		{
+			"display": "berhenti,",
+			"start": 21.815,
+			"end": 22.465,
+			"segment": 2
+		},
+		{
+			"display": "gatal",
+			"start": 22.582,
+			"end": 23.069,
+			"segment": 2
+		},
+		{
+			"display": "langsung",
+			"start": 23.116,
+			"end": 23.522,
+			"segment": 2
+		},
+		{
+			"display": "balik!",
+			"start": 23.568,
+			"end": 24.207,
+			"segment": 2
+		},
+		{
+			"display": "Kuncinya",
+			"start": 24.451,
+			"end": 24.973,
+			"segment": 3
+		},
+		{
+			"display": "adalah",
+			"start": 25.008,
+			"end": 25.356,
+			"segment": 3
+		},
+		{
+			"display": "memperbaiki",
+			"start": 25.438,
+			"end": 26.308,
+			"segment": 3
+		},
+		{
+			"display": "lapisan",
+			"start": 26.424,
+			"end": 26.97,
+			"segment": 3
+		},
+		{
+			"display": "pelindung",
+			"start": 27.051,
+			"end": 27.551,
+			"segment": 3
+		},
+		{
+			"display": "kulit.",
+			"start": 27.609,
+			"end": 28.247,
+			"segment": 3
+		},
+		{
+			"display": "Kenali",
+			"start": 28.491,
+			"end": 28.944,
+			"segment": 3
+		},
+		{
+			"display": "Noekoella",
+			"start": 29.06,
+			"end": 29.733,
+			"segment": 3
+		},
+		{
+			"display": "Skin",
+			"start": 29.791,
+			"end": 30.14,
+			"segment": 3
+		},
+		{
+			"display": "Barrier",
+			"start": 30.256,
+			"end": 30.662,
+			"segment": 3
+		},
+		{
+			"display": "Care,",
+			"start": 30.755,
+			"end": 31.359,
+			"segment": 3
+		},
+		{
+			"display": "dengan",
+			"start": 31.533,
+			"end": 31.824,
+			"segment": 3
+		},
+		{
+			"display": "Ceramide",
+			"start": 31.893,
+			"end": 32.358,
+			"segment": 3
+		},
+		{
+			"display": "Complex",
+			"start": 32.392,
+			"end": 32.892,
+			"segment": 3
+		},
+		{
+			"display": "untuk",
+			"start": 33.008,
+			"end": 33.275,
+			"segment": 3
+		},
+		{
+			"display": "mengunci",
+			"start": 33.333,
+			"end": 33.739,
+			"segment": 3
+		},
+		{
+			"display": "kelembapan",
+			"start": 33.786,
+			"end": 34.436,
+			"segment": 3
+		},
+		{
+			"display": "dan",
+			"start": 34.68,
+			"end": 34.865,
+			"segment": 3
+		},
+		{
+			"display": "memperkuat",
+			"start": 34.923,
+			"end": 35.481,
+			"segment": 3
+		},
+		{
+			"display": "skin barrier",
+			"start": 35.527,
+			"end": 36.224,
+			"segment": 3
+		},
+		{
+			"display": "secara",
+			"start": 36.305,
+			"end": 36.688,
+			"segment": 3
+		},
+		{
+			"display": "mendalam.",
+			"start": 36.735,
+			"end": 37.408,
+			"segment": 3
+		},
+		{
+			"display": "Hentikan",
+			"start": 37.733,
+			"end": 38.348,
+			"segment": 4
+		},
+		{
+			"display": "siklus",
+			"start": 38.43,
+			"end": 38.824,
+			"segment": 4
+		},
+		{
+			"display": "kambuhnya",
+			"start": 38.906,
+			"end": 39.428,
+			"segment": 4
+		},
+		{
+			"display": "dari",
+			"start": 39.509,
+			"end": 39.8,
+			"segment": 4
+		},
+		{
+			"display": "akar.",
+			"start": 39.881,
+			"end": 40.427,
+			"segment": 4
+		},
+		{
+			"display": "Cek",
+			"start": 40.67,
+			"end": 40.949,
+			"segment": 4
+		},
+		{
+			"display": "Noekoella",
+			"start": 41.065,
+			"end": 41.75,
+			"segment": 4
+		},
+		{
+			"display": "sekarang",
+			"start": 41.82,
+			"end": 42.261,
+			"segment": 4
+		},
+		{
+			"display": "dan",
+			"start": 42.342,
+			"end": 42.493,
+			"segment": 4
+		},
+		{
+			"display": "kembalikan",
+			"start": 42.574,
+			"end": 43.259,
+			"segment": 4
+		},
+		{
+			"display": "kenyamanan",
+			"start": 43.352,
+			"end": 43.921,
+			"segment": 4
+		},
+		{
+			"display": "kulitmu!",
+			"start": 43.991,
+			"end": 44.815,
+			"segment": 4
+		}
+	]
+}
