@@ -40,15 +40,15 @@ export const Problem: FC<SceneProps> = ({dur, beat}) => {
 				top={520}
 				borderColor="#38bdf8"
 			>
-				<div style={{display: 'flex', flexDirection: 'column', gap: 10}}>
-					<div style={{display: 'flex', alignItems: 'center', gap: 10}}>
-						<span style={{color: '#f59e0b', fontSize: 26}}>🛑</span>
-						<span style={{color: '#f8fafc', fontSize: 22, fontWeight: 800, textTransform: 'uppercase'}}>
+				<div style={{display: 'flex', flexDirection: 'column', gap: 12}}>
+					<div style={{display: 'flex', alignItems: 'center', gap: 14}}>
+						<span style={{fontSize: 34}}>🛑</span>
+						<span style={{color: '#f59e0b', fontSize: 26, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.2}}>
 							Hindari Kesalahan Fatal:
 						</span>
 					</div>
-					<div style={{color: '#cbd5e1', fontSize: 21, fontWeight: 500, lineHeight: 1.4}}>
-						Jangan pakai produk berkandungan alkohol tinggi, pewangi menyengat, atau scrub kasar yang mengikis lapisan pelindung kulit.
+					<div style={{color: '#ffffff', fontSize: 32, fontWeight: 600, lineHeight: 1.35}}>
+						Jangan pakai skincare beralkohol, pewangi keras, atau scrub yang mengikis lapisan pelindung kulit!
 					</div>
 				</div>
 			</FloatingCard>

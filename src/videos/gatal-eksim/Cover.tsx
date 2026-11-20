@@ -15,14 +15,14 @@ export const GatalEksimCover: FC = () => (
 			animated={false}
 		/>
 		<FloatingCard bottom={380} borderColor="#10b981" animated={false}>
-			<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: 8}}>
-				<span style={{color: '#10b981', fontSize: 22, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5}}>
+			<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: 10}}>
+				<span style={{color: '#10b981', fontSize: 26, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5}}>
 					Solusi Sawar Kulit
 				</span>
-				<span style={{color: '#ffffff', fontSize: 30, fontWeight: 800}}>
+				<span style={{color: '#ffffff', fontSize: 38, fontWeight: 900}}>
 					Noekoella Skin Barrier Care
 				</span>
-				<span style={{color: '#94a3b8', fontSize: 20, fontWeight: 500}}>
+				<span style={{color: '#cbd5e1', fontSize: 26, fontWeight: 600}}>
 					Mengunci Kelembapan & Meredakan Rasa Gatal
 				</span>
 			</div>

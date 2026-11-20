@@ -41,23 +41,27 @@ export const Hook: FC<SceneProps> = ({dur, beat}) => {
 				top={520}
 				borderColor="#ef4444"
 			>
-				<div style={{display: 'flex', alignItems: 'center', gap: 16}}>
+				<div style={{display: 'flex', alignItems: 'center', gap: 20}}>
 					<div
 						style={{
-							fontSize: 38,
-							padding: '12px 16px',
-							borderRadius: 16,
-							backgroundColor: 'rgba(239, 68, 68, 0.2)',
-							border: '1px solid #ef4444',
+							fontSize: 48,
+							padding: '16px 20px',
+							borderRadius: 20,
+							backgroundColor: 'rgba(239, 68, 68, 0.25)',
+							border: '2px solid #ef4444',
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'center',
+							flexShrink: 0,
 						}}
 					>
 						🚨
 					</div>
-					<div style={{display: 'flex', flexDirection: 'column', gap: 4}}>
-						<span style={{color: '#f87171', fontSize: 20, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1}}>
+					<div style={{display: 'flex', flexDirection: 'column', gap: 8}}>
+						<span style={{color: '#f87171', fontSize: 26, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5}}>
 							Bahaya Garukan Berulang
 						</span>
-						<span style={{color: '#f8fafc', fontSize: 24, fontWeight: 600, lineHeight: 1.3}}>
+						<span style={{color: '#ffffff', fontSize: 34, fontWeight: 700, lineHeight: 1.3}}>
 							Sawar kulit robek, memicu infeksi dan alarm radang lebih parah!
 						</span>
 					</div>

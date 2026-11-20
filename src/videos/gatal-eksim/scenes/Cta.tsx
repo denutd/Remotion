@@ -40,22 +40,22 @@ export const Cta: FC<SceneProps> = ({dur, beat}) => {
 				top={520}
 				borderColor="#f59e0b"
 			>
-				<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: 10}}>
+				<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: 14}}>
 					<div
 						style={{
 							backgroundColor: '#f59e0b',
 							color: '#0f172a',
-							fontWeight: 800,
-							fontSize: 26,
-							padding: '14px 36px',
-							borderRadius: 40,
-							boxShadow: '0 6px 24px rgba(245, 158, 11, 0.45)',
+							fontWeight: 900,
+							fontSize: 34,
+							padding: '18px 46px',
+							borderRadius: 50,
+							boxShadow: '0 8px 30px rgba(245, 158, 11, 0.5)',
 							letterSpacing: 0.5,
 						}}
 					>
 						Coba Noekoella Skin Barrier
 					</div>
-					<div style={{color: '#e2e8f0', fontSize: 20, fontWeight: 500, marginTop: 4}}>
+					<div style={{color: '#f8fafc', fontSize: 26, fontWeight: 600, marginTop: 4}}>
 						Jangan tunggu kulit semakin kering & teriritasi!
 					</div>
 				</div>

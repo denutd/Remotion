@@ -40,23 +40,23 @@ export const Solution: FC<SceneProps> = ({dur, beat}) => {
 				top={520}
 				borderColor="#10b981"
 			>
-				<div style={{display: 'flex', flexDirection: 'column', gap: 12}}>
-					<div style={{display: 'flex', alignItems: 'center', gap: 12}}>
-						<span style={{fontSize: 24}}>💧</span>
-						<span style={{color: '#f8fafc', fontSize: 22, fontWeight: 700}}>
+				<div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
+					<div style={{display: 'flex', alignItems: 'center', gap: 16}}>
+						<span style={{fontSize: 34}}>💧</span>
+						<span style={{color: '#ffffff', fontSize: 32, fontWeight: 700}}>
 							Mengunci Hidrasi & Meredakan Rasa Kering
 						</span>
 					</div>
 					<div
 						style={{
-							height: 1,
-							backgroundColor: 'rgba(255,255,255,0.1)',
+							height: 1.5,
+							backgroundColor: 'rgba(255,255,255,0.15)',
 							width: '100%',
 						}}
 					/>
-					<div style={{display: 'flex', alignItems: 'center', gap: 12}}>
-						<span style={{fontSize: 24}}>🛡️</span>
-						<span style={{color: '#34d399', fontSize: 22, fontWeight: 700}}>
+					<div style={{display: 'flex', alignItems: 'center', gap: 16}}>
+						<span style={{fontSize: 34}}>🛡️</span>
+						<span style={{color: '#34d399', fontSize: 32, fontWeight: 700}}>
 							Mendukung Perbaikan Alami Skin Barrier
 						</span>
 					</div>
