@@ -32,6 +32,11 @@ const VIDEOS: Record<string, {id: string; title: string; script: string}> = {
 		title: 'Apa Itu Eksim Sebenarnya?',
 		script: '../src/videos/apa-itu-eksim/script.ts',
 	},
+	'gatal-eksim': {
+		id: 'GatalEksim',
+		title: 'Awalnya Cuma Gatal Sedikit, Tapi Sekali Digaruk Malah Susah Berhenti!',
+		script: '../src/videos/gatal-eksim/script.ts',
+	},
 };
 
 const [slug, ...rest] = process.argv.slice(2);
@@ -56,7 +61,13 @@ const inputProps = {debug: false};
 
 let last = -1;
 try {
-	const composition = await selectComposition({serveUrl, id: video.id, inputProps, chromiumOptions});
+	const composition = await selectComposition({
+		serveUrl,
+		id: video.id,
+		inputProps,
+		chromiumOptions,
+		timeoutInMilliseconds: 120000,
+	});
 	await renderMedia({
 		serveUrl,
 		composition,

@@ -8,3 +8,4 @@ Ringkasan prinsip untuk semua AI Agent:
 3. Verifikasi setiap hasil visual lewat `npm run lint`, `npm run stills -- <Id> ... --debug` (inspeksi PNG), `beku.py`, dan `audit.sh`.
 4. **Dukungan Konten Afiliasi & Komersial**: Diperbolehkan dan didukung penuh menampilkan wajah, manusia, ekspresi emosi, footage B-roll lifestyle, model produk, dan elemen visual dinamis lainnya yang relevan untuk konversi penjualan dan affiliate marketing. Pastikan aset bebas hak cipta komersial (Pexels, Unsplash, lisensi CC0/komersial, atau aset pengguna sendiri).
 5. Jangan pernah membaca isi `.env` ke chat, mencetaknya, atau memasukkannya ke Git.
+6. **Koleksi Aset Eksim & Produk**: Seluruh aset video & gambar yang telah dikumpulkan user berada di `public/assets/eksim/` dan telah terindeks lengkap di `docs/aset-eksim-catalog.json`. Saat membuat video eksim/produk berikutnya, gunakan langsung aset dari katalog tersebut tanpa perlu membaca ulang file.

@@ -29,7 +29,14 @@ const serveUrl = await bundle({entryPoint: path.resolve('src/index.ts')});
 console.log(`bundle: ${((Date.now() - t0) / 1000).toFixed(1)} dtk`);
 const browser = await openBrowser('chrome', {chromiumOptions: {gl: 'angle'}, logLevel});
 const inputProps = {debug, ...extra};
-const composition = await selectComposition({serveUrl, id, inputProps, puppeteerInstance: browser, logLevel});
+const composition = await selectComposition({
+	serveUrl,
+	id,
+	inputProps,
+	puppeteerInstance: browser,
+	logLevel,
+	timeoutInMilliseconds: 120000,
+});
 mkdirSync(path.join('out', 'stills'), {recursive: true});
 
 for (const t of times) {
