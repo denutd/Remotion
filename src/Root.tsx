@@ -7,6 +7,8 @@ import {CahayaMatahari, timeline as cahayaMatahari} from './videos/cahaya-mataha
 import {CahayaMatahariCover} from './videos/cahaya-matahari/Cover';
 import {EksimKambuhCover} from './videos/eksim-kambuh/Cover';
 import {EksimKambuh, timeline as eksimKambuh} from './videos/eksim-kambuh/EksimKambuh';
+import {EksimLukaCover} from './videos/eksim-luka/Cover';
+import {EksimLuka, timeline as eksimLuka} from './videos/eksim-luka/EksimLuka';
 import {GatalEksimCover} from './videos/gatal-eksim/Cover';
 import {GatalEksim, timeline as gatalEksim} from './videos/gatal-eksim/GatalEksim';
 import {KertasA4Cover} from './videos/kertas-a4/Cover';
@@ -81,5 +83,16 @@ export const RemotionRoot: FC = () => (
 			defaultProps={{debug: false}}
 		/>
 		<Still id="EksimKambuhCover" component={EksimKambuhCover} width={W} height={H} />
+
+		<Composition
+			id="EksimLuka"
+			component={EksimLuka}
+			durationInFrames={eksimLuka.durationInFrames}
+			fps={FPS}
+			width={W}
+			height={H}
+			defaultProps={{debug: false}}
+		/>
+		<Still id="EksimLukaCover" component={EksimLukaCover} width={W} height={H} />
 	</>
 );

@@ -42,6 +42,11 @@ const VIDEOS: Record<string, {id: string; title: string; script: string}> = {
 		title: 'Kenapa Kulit Eksim Sering Kambuh Padahal Sudah Diobati?',
 		script: '../src/videos/eksim-kambuh/script.ts',
 	},
+	'eksim-luka': {
+		id: 'EksimLuka',
+		title: 'Eksim Sampai Luka? Jangan Tunggu Makin Parah!',
+		script: '../src/videos/eksim-luka/script.ts',
+	},
 };
 
 const [slug, ...rest] = process.argv.slice(2);
