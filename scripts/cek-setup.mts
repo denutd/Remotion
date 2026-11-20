@@ -59,9 +59,25 @@ else warn('kit SFX belum dibuat', 'jalankan `npm run sfx-kit` untuk mensintesis 
 if (!existsSync('.env')) {
 	warn('.env belum ada (aman untuk latihan mode --estimate / Remotion Studio)', 'untuk buat narasi suara AI: salin `.env.example` ke `.env` lalu isi ELEVENLABS_API_KEY');
 } else {
-	const key = /^ELEVENLABS_API_KEY=(.+)$/m.exec(readFileSync('.env', 'utf8'))?.[1]?.trim() ?? '';
-	if (key.length >= 20) ok('.env berisi ELEVENLABS_API_KEY');
-	else warn('.env ada, tetapi ELEVENLABS_API_KEY masih kosong', 'isi ELEVENLABS_API_KEY=... jika ingin menjalankan `npm run voice`');
+	const content = readFileSync('.env', 'utf8');
+	const lines = content.split(/\r?\n/);
+	const keys: string[] = [];
+	for (const line of lines) {
+		const m = /^\s*(ELEVENLABS_API_KEYS?|ELEVENLABS_API_KEY_\d+)\s*=\s*(.*)\s*$/.exec(line);
+		if (!m) continue;
+		const val = m[2].replace(/^['"]|['"]$/g, '').trim();
+		if (val) {
+			keys.push(...val.split(',').map((k) => k.trim()).filter((k) => k.length >= 10));
+		}
+	}
+	const count = new Set(keys).size;
+	if (count > 1) {
+		ok(`.env berisi ${count} API key ElevenLabs (Auto-Failover Multi-Key Aktif ✓)`);
+	} else if (count === 1) {
+		ok('.env berisi ELEVENLABS_API_KEY');
+	} else {
+		warn('.env ada, tetapi ELEVENLABS_API_KEY masih kosong', 'isi ELEVENLABS_API_KEY=... jika ingin menjalankan `npm run voice`');
+	}
 }
 
 // 6. Opsional QA: bash & python

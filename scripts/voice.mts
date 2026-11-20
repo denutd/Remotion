@@ -5,7 +5,7 @@
 
 import {existsSync, mkdirSync, readFileSync, writeFileSync} from 'node:fs';
 import path from 'node:path';
-import {elevenJson, postJson} from './lib/eleven.mts';
+import {elevenJson, getApiKeys, postJson} from './lib/eleven.mts';
 import {tts, type AlignedWord, type Speech, type VoiceConfig} from './lib/tts.mts';
 import {alignmentText, normalizeWord, tokenize, ttsText, type Segment} from '../src/lib/narration.ts';
 import {
@@ -187,6 +187,12 @@ if (process.argv.includes('--estimate')) {
 	const tokens = tokenize(segments);
 	const spoken = tokens.flatMap((t) => t.spoken);
 	const text = ttsText(segments);
+	try {
+		const keys = getApiKeys();
+		if (keys.length > 1) {
+			console.log(`Multi-Key ElevenLabs: ${keys.length} API key terdeteksi (Auto-Failover Aktif ✓)`);
+		}
+	} catch {}
 	console.log(`Membuat narasi: ${voice.name} / ${voice.model} (${text.length} karakter)`);
 	const speech = await speak(voice, text, voice);
 	const rel = `voice/${slug}/voice.mp3`;
