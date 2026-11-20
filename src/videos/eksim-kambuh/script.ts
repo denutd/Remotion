@@ -7,13 +7,13 @@ export const slug = 'eksim-kambuh';
 
 export const tail = 0.5;
 
-// Suara Alice (wanita ekspresif, hangat, ramah, dan meyakinkan untuk edukasi skincare & kesehatan)
+// Suara Siti (penutur asli Indonesia, hangat, ramah, dan meyakinkan untuk edukasi skincare & kesehatan)
 export const voice = {
-	name: 'Alice',
-	voiceId: 'Xb7hH8MSUJpSbSDYk0k2',
+	name: 'Siti',
+	voiceId: 'WAotVoK2Yv2ufjocfYYs',
 	model: 'eleven_multilingual_v2',
-	stability: 0.5,
-	similarity: 0.75,
+	stability: 0.65,
+	similarity: 0.8,
 	seed: 123,
 };
 
